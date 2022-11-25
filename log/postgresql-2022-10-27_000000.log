@@ -1,0 +1,1029 @@
+2022-10-27 15:27:15.282 MST [4204] ERROR:  syntax error at or near "id" at character 37
+2022-10-27 15:27:15.282 MST [4204] STATEMENT:  CREATE TABLE Character (PRIMARY KEY id int, name varchar(255)
+2022-10-27 15:27:15.298 MST [4204] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:27:33.410 MST [10896] ERROR:  relation "games" already exists
+2022-10-27 15:27:33.410 MST [10896] STATEMENT:  CREATE TABLE games (id int, genres int[] NULL, game_engines int[] NULL, franchise int[] NULL, age_ratings int[] NULL, platforms int[] NULL, release_dates int[] NULL, name varchar(255), involved_companies int[] NULL)
+2022-10-27 15:27:33.431 MST [10896] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:29:03.094 MST [3116] ERROR:  syntax error at or near "ls" at character 1
+2022-10-27 15:29:03.094 MST [3116] STATEMENT:  ls
+	DROP TABLE "games";
+2022-10-27 15:29:24.882 MST [4264] ERROR:  syntax error at or near "id" at character 37
+2022-10-27 15:29:24.882 MST [4264] STATEMENT:  CREATE TABLE Character (PRIMARY KEY id int, name varchar(255)
+2022-10-27 15:29:24.900 MST [4264] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:29:55.419 MST [14344] ERROR:  relation "games" already exists
+2022-10-27 15:29:55.419 MST [14344] STATEMENT:  CREATE TABLE games (id int, genres int[] NULL, game_engines int[] NULL, franchise int[] NULL, age_ratings int[] NULL, platforms int[] NULL, release_dates int[] NULL, name varchar(255), involved_companies int[] NULL)
+2022-10-27 15:29:55.437 MST [14344] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:30:08.637 MST [19800] ERROR:  syntax error at or near "id" at character 37
+2022-10-27 15:30:08.637 MST [19800] STATEMENT:  CREATE TABLE Character (PRIMARY KEY id int, name varchar(255))
+2022-10-27 15:30:08.660 MST [19800] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:31:37.772 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 15:31:43.426 MST [3984] LOG:  checkpoint complete: wrote 46 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.904 s, sync=0.607 s, total=5.655 s; sync files=24, longest=0.043 s, average=0.026 s; distance=285 kB, estimate=288 kB
+2022-10-27 15:33:15.517 MST [9632] ERROR:  syntax error at or near "int" at character 64
+2022-10-27 15:33:15.517 MST [9632] STATEMENT:  CREATE TABLE Character (id int, name varchar(255), PRIMARY KEY int (id))
+2022-10-27 15:33:15.532 MST [9632] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:34:00.907 MST [14140] ERROR:  syntax error at or near "id" at character 35
+2022-10-27 15:34:00.907 MST [14140] STATEMENT:  CREATE TABLE Appears (PRIMARY KEY id hasInt, FOREIGN KEY (characterId) REFERENCES Character(int)FOREIGN KEY (gameID) REFERENCES Games(id))
+2022-10-27 15:34:00.921 MST [14140] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:36:37.427 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 15:36:42.063 MST [3984] LOG:  checkpoint complete: wrote 39 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.820 s, sync=0.701 s, total=4.637 s; sync files=25, longest=0.050 s, average=0.029 s; distance=209 kB, estimate=280 kB
+2022-10-27 15:40:37.879 MST [3116] ERROR:  syntax error at or near "*" at character 12
+2022-10-27 15:40:37.879 MST [3116] STATEMENT:  DROP TABLE *;
+2022-10-27 15:40:53.334 MST [3116] ERROR:  table "Appears" does not exist
+2022-10-27 15:40:53.334 MST [3116] STATEMENT:  DROP TABLE "Appears";
+2022-10-27 15:41:08.388 MST [10404] ERROR:  there is no unique constraint matching given keys for referenced table "games"
+2022-10-27 15:41:08.388 MST [10404] STATEMENT:  CREATE TABLE Appears (id int PRIMARY KEY, characterID int, gameID int, FOREIGN KEY (characterID) REFERENCES Character(id), FOREIGN KEY (gameID) REFERENCES games(id))
+2022-10-27 15:41:08.403 MST [10404] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:41:37.064 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 15:41:42.150 MST [3984] LOG:  checkpoint complete: wrote 43 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.222 s, sync=0.747 s, total=5.087 s; sync files=29, longest=0.048 s, average=0.026 s; distance=206 kB, estimate=273 kB
+2022-10-27 15:42:08.325 MST [10876] ERROR:  syntax error at or near "FOREIGN" at character 112
+2022-10-27 15:42:08.325 MST [10876] STATEMENT:  CREATE TABLE AgeRating (id int NOT NULL PRIMARY KEY, rating int, content_descriptions varchar(255), GameId int FOREIGN KEY REFERENCES games(id))
+2022-10-27 15:42:08.352 MST [10876] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:44:26.815 MST [3116] ERROR:  cannot drop table "character" because other objects depend on it
+2022-10-27 15:44:26.815 MST [3116] DETAIL:  constraint appears_characterid_fkey on table appears depends on table "character"
+2022-10-27 15:44:26.815 MST [3116] HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2022-10-27 15:44:26.815 MST [3116] STATEMENT:  DROP TABLE "character";
+2022-10-27 15:44:53.399 MST [3116] ERROR:  syntax error at or near "/" at character 1
+2022-10-27 15:44:53.399 MST [3116] STATEMENT:  /dt
+	/dt
+	DROP TABLE "character";
+2022-10-27 15:45:03.791 MST [3116] ERROR:  cannot drop table games because other objects depend on it
+2022-10-27 15:45:03.791 MST [3116] DETAIL:  constraint appears_gameid_fkey on table appears depends on table games
+2022-10-27 15:45:03.791 MST [3116] HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+2022-10-27 15:45:03.791 MST [3116] STATEMENT:  DROP TABLE "games";
+2022-10-27 15:45:25.673 MST [10868] ERROR:  syntax error at or near "gameID" at character 125
+2022-10-27 15:45:25.673 MST [10868] STATEMENT:  CREATE TABLE AgeRating (id int NOT NULL PRIMARY KEY, rating int, content_descriptions varchar(255), gameId int, FOREIGN KEY gameID REFERENCES games(id))
+2022-10-27 15:45:25.687 MST [10868] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:46:16.703 MST [3116] ERROR:  table "Appears" does not exist
+2022-10-27 15:46:16.703 MST [3116] STATEMENT:  DROP TABLE "Appears";
+2022-10-27 15:46:29.968 MST [19444] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:46:37.151 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 15:46:46.408 MST [3984] LOG:  checkpoint complete: wrote 83 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.361 s, sync=0.778 s, total=9.258 s; sync files=36, longest=0.041 s, average=0.022 s; distance=515 kB, estimate=515 kB
+2022-10-27 15:48:52.500 MST [3232] ERROR:  relation "franchise" does not exist at character 13
+2022-10-27 15:48:52.500 MST [3232] STATEMENT:  INSERT INTO franchise (id, games, name) VALUES(545, ARRAY[6805,9626,10091,11754,11755,11767,11768,11769,11770,11771,12078,25821,26994,38484,138178,139134,142738,142739], 'VOCALOID')
+2022-10-27 15:48:52.503 MST [3232] ERROR:  relation "franchise" does not exist at character 13
+2022-10-27 15:48:52.503 MST [3232] STATEMENT:  INSERT INTO franchise (id, games, name) VALUES(2574, ARRAY[145390], 'NextRev')
+2022-10-27 15:48:52.522 MST [3232] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 15:51:37.410 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 15:51:40.610 MST [3984] LOG:  checkpoint complete: wrote 28 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.711 s, sync=0.370 s, total=3.200 s; sync files=16, longest=0.034 s, average=0.024 s; distance=150 kB, estimate=478 kB
+2022-10-27 16:05:55.807 MST [15636] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 16:06:37.615 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 16:06:42.965 MST [3984] LOG:  checkpoint complete: wrote 44 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.674 s, sync=0.558 s, total=5.350 s; sync files=29, longest=0.049 s, average=0.020 s; distance=270 kB, estimate=458 kB
+2022-10-27 16:07:11.276 MST [4640] ERROR:  syntax error at or near "," at character 135
+2022-10-27 16:07:11.276 MST [4640] STATEMENT:  CREATE TABLE ConsistsOf (id int NOT NULL PRIMARY KEY, gameID int, franchiseID int, FOREIGN KEY (franchiseID) REFERENCES franchise(id)), FOREIGN KEY (gameID) REFERENCES games(id))
+2022-10-27 16:07:11.295 MST [4640] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 16:07:41.971 MST [1432] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 16:11:37.971 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 16:11:43.126 MST [3984] LOG:  checkpoint complete: wrote 43 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.566 s, sync=0.539 s, total=5.156 s; sync files=31, longest=0.041 s, average=0.018 s; distance=237 kB, estimate=435 kB
+2022-10-27 17:55:44.302 MST [10588] ERROR:  syntax error at or near "," at character 149
+2022-10-27 17:55:44.302 MST [10588] STATEMENT:  CREATE TABLE hasReleaseDate (id int NOT NULL PRIMARY KEY, gameID int, platformID int,releaseID int,FOREIGN KEY (platformID) REFERENCES platform(id)), FOREIGN KEY (gameID) REFERENCES games(id))FOREIGN KEY (releaseID) REFERENCES releaseDate(id))
+2022-10-27 17:55:44.318 MST [10588] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 17:55:55.554 MST [18076] ERROR:  syntax error at or near "," at character 149
+2022-10-27 17:55:55.554 MST [18076] STATEMENT:  CREATE TABLE hasReleaseDate (id int NOT NULL PRIMARY KEY, gameID int, platformID int,releaseID int,FOREIGN KEY (platformID) REFERENCES platform(id)), FOREIGN KEY (gameID) REFERENCES games(id))FOREIGN KEY (releaseID) REFERENCES releaseDate(id))
+2022-10-27 17:55:55.568 MST [18076] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 17:56:27.599 MST [8208] ERROR:  syntax error at or near "FOREIGN" at character 191
+2022-10-27 17:56:27.599 MST [8208] STATEMENT:  CREATE TABLE hasReleaseDate (id int NOT NULL PRIMARY KEY, gameID int, platformID int,releaseID int,FOREIGN KEY (platformID) REFERENCES platform(id), FOREIGN KEY (gameID) REFERENCES games(id)FOREIGN KEY (releaseID) REFERENCES releaseDate(id))
+2022-10-27 17:56:27.616 MST [8208] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 17:56:31.746 MST [10516] ERROR:  syntax error at or near "FOREIGN" at character 191
+2022-10-27 17:56:31.746 MST [10516] STATEMENT:  CREATE TABLE hasReleaseDate (id int NOT NULL PRIMARY KEY, gameID int, platformID int,releaseID int,FOREIGN KEY (platformID) REFERENCES platform(id), FOREIGN KEY (gameID) REFERENCES games(id)FOREIGN KEY (releaseID) REFERENCES releaseDate(id))
+2022-10-27 17:56:31.759 MST [10516] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 17:56:47.648 MST [9740] ERROR:  relation "platform" does not exist
+2022-10-27 17:56:47.648 MST [9740] STATEMENT:  CREATE TABLE hasReleaseDate (id int NOT NULL PRIMARY KEY, gameID int, platformID int,releaseID int,FOREIGN KEY (platformID) REFERENCES platform(id), FOREIGN KEY (gameID) REFERENCES games(id), FOREIGN KEY (releaseID) REFERENCES releaseDate(id))
+2022-10-27 17:56:47.663 MST [9740] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 17:57:29.122 MST [16712] ERROR:  relation "releasedate" does not exist
+2022-10-27 17:57:29.122 MST [16712] STATEMENT:  CREATE TABLE hasReleaseDate (id int NOT NULL PRIMARY KEY, gameID int, platformID int,releaseID int,FOREIGN KEY (platformID) REFERENCES platform(id), FOREIGN KEY (gameID) REFERENCES games(id), FOREIGN KEY (releaseID) REFERENCES releaseDate(id))
+2022-10-27 17:57:29.136 MST [16712] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 17:57:48.999 MST [13572] ERROR:  relation "platform" already exists
+2022-10-27 17:57:48.999 MST [13572] STATEMENT:  CREATE TABLE platform (id int NOT NULL PRIMARY KEY, name varchar(255), generation int)
+2022-10-27 17:57:49.012 MST [13572] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 17:58:06.779 MST [8344] ERROR:  syntax error at or near "," at character 111
+2022-10-27 17:58:06.779 MST [8344] STATEMENT:  CREATE TABLE madeIn (id int NOT NULL PRIMARY KEY, gameID int, engineID int, FOREIGN KEY (engineID) REFERENCES , FOREIGN KEY (gameID) REFERENCES games(id))
+2022-10-27 17:58:06.795 MST [8344] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 17:58:11.995 MST [20624] ERROR:  relation "releasedate" already exists
+2022-10-27 17:58:11.995 MST [20624] STATEMENT:  CREATE TABLE releaseDate (id int NOT NULL PRIMARY KEY, human varchar(255), region int)
+2022-10-27 17:58:12.010 MST [20624] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 17:58:26.612 MST [12112] ERROR:  relation "hasreleasedate" already exists
+2022-10-27 17:58:26.612 MST [12112] STATEMENT:  CREATE TABLE hasReleaseDate (id int NOT NULL PRIMARY KEY, gameID int, platformID int,releaseID int,FOREIGN KEY (platformID) REFERENCES platform(id), FOREIGN KEY (gameID) REFERENCES games(id), FOREIGN KEY (releaseID) REFERENCES releaseDate(id))
+2022-10-27 17:58:26.628 MST [12112] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 17:58:37.529 MST [13420] ERROR:  syntax error at or near "," at character 111
+2022-10-27 17:58:37.529 MST [13420] STATEMENT:  CREATE TABLE madeIn (id int NOT NULL PRIMARY KEY, gameID int, engineID int, FOREIGN KEY (engineID) REFERENCES , FOREIGN KEY (gameID) REFERENCES games(id))
+2022-10-27 17:58:37.546 MST [13420] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 18:01:37.291 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 18:01:43.968 MST [3984] LOG:  checkpoint complete: wrote 58 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.202 s, sync=0.371 s, total=6.677 s; sync files=32, longest=0.026 s, average=0.012 s; distance=301 kB, estimate=422 kB
+2022-10-27 18:02:11.593 MST [9508] ERROR:  syntax error at or near "(" at character 73
+2022-10-27 18:02:11.593 MST [9508] STATEMENT:  CREATE TABLE GameEngine (id int NOT NULL PRIMARY KEY, name varchar(255) (or Int if that's what the API has), platforms int[],companies int[],GameId int FOREIGN KEY REFERENCES games(id))
+2022-10-27 18:02:11.607 MST [9508] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 18:02:29.617 MST [20616] ERROR:  syntax error at or near "FOREIGN" at character 117
+2022-10-27 18:02:29.617 MST [20616] STATEMENT:  CREATE TABLE GameEngine (id int NOT NULL PRIMARY KEY, name varchar(255), platforms int[],companies int[],GameId int FOREIGN KEY REFERENCES games(id))
+2022-10-27 18:02:29.632 MST [20616] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 18:03:20.587 MST [16840] ERROR:  syntax error at or near "," at character 111
+2022-10-27 18:03:20.587 MST [16840] STATEMENT:  CREATE TABLE madeIn (id int NOT NULL PRIMARY KEY, gameID int, engineID int, FOREIGN KEY (engineID) REFERENCES , FOREIGN KEY (gameID) REFERENCES games(id))
+2022-10-27 18:03:20.600 MST [16840] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 18:03:30.535 MST [3904] ERROR:  relation "gameengine" already exists
+2022-10-27 18:03:30.535 MST [3904] STATEMENT:  CREATE TABLE GameEngine (id int NOT NULL PRIMARY KEY, name varchar(255), platforms int[], companies int[], gameID int, FOREIGN KEY (gameID) REFERENCES games(id))
+2022-10-27 18:03:30.549 MST [3904] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 18:03:40.710 MST [17100] ERROR:  syntax error at or near "," at character 111
+2022-10-27 18:03:40.710 MST [17100] STATEMENT:  CREATE TABLE madeIn (id int NOT NULL PRIMARY KEY, gameID int, engineID int, FOREIGN KEY (engineID) REFERENCES , FOREIGN KEY (gameID) REFERENCES games(id))
+2022-10-27 18:03:40.725 MST [17100] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 18:04:05.443 MST [16372] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 18:06:37.977 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 18:06:47.164 MST [3984] LOG:  checkpoint complete: wrote 81 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.638 s, sync=0.444 s, total=9.188 s; sync files=36, longest=0.030 s, average=0.013 s; distance=343 kB, estimate=414 kB
+2022-10-27 20:41:17.515 MST [6560] ERROR:  column "games" of relation "franchise" does not exist at character 28
+2022-10-27 20:41:17.515 MST [6560] STATEMENT:  INSERT INTO franchise (id, games, name) VALUES(545, ARRAY[6805,9626,10091,11754,11755,11767,11768,11769,11770,11771,12078,25821,26994,38484,138178,139134,142738,142739], 'VOCALOID')
+2022-10-27 20:41:17.525 MST [6560] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 20:41:39.100 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 20:41:40.832 MST [3984] LOG:  checkpoint complete: wrote 17 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.511 s, sync=0.089 s, total=1.732 s; sync files=5, longest=0.041 s, average=0.018 s; distance=117 kB, estimate=384 kB
+2022-10-27 20:42:12.857 MST [7572] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-27 20:42:12.857 MST [7572] DETAIL:  Key (id)=(222917) already exists.
+2022-10-27 20:42:12.857 MST [7572] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222917, NULL, NULL, NULL, NULL, NULL, NULL, 'Doki Doki Literature Club: Return to the Portrait', NULL)
+2022-10-27 20:42:12.864 MST [7572] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-27 20:42:12.864 MST [7572] DETAIL:  Key (id)=(222915) already exists.
+2022-10-27 20:42:12.864 MST [7572] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222915, NULL, NULL, NULL, NULL, NULL, NULL, 'Yasuke: A Lost Descendant', NULL)
+2022-10-27 20:42:12.887 MST [7572] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 20:46:39.832 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 20:46:41.727 MST [3984] LOG:  checkpoint complete: wrote 17 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.613 s, sync=0.163 s, total=1.895 s; sync files=10, longest=0.036 s, average=0.017 s; distance=29 kB, estimate=349 kB
+2022-10-27 20:46:44.709 MST [6440] ERROR:  insert or update on table "consistsof" violates foreign key constraint "consistsof_gameid_fkey"
+2022-10-27 20:46:44.709 MST [6440] DETAIL:  Key (gameid)=(6805) is not present in table "games".
+2022-10-27 20:46:44.709 MST [6440] STATEMENT:  INSERT INTO consistsof (id, gameID, franchiseID) VALUES(1, 6805, 545)
+2022-10-27 20:46:44.726 MST [6440] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 20:48:52.285 MST [332] ERROR:  insert or update on table "consistsof" violates foreign key constraint "consistsof_gameid_fkey"
+2022-10-27 20:48:52.285 MST [332] DETAIL:  Key (gameid)=(6805) is not present in table "games".
+2022-10-27 20:48:52.285 MST [332] STATEMENT:  INSERT INTO consistsof (id, gameID, franchiseID) VALUES(1, 6805, 545)
+2022-10-27 20:48:52.299 MST [332] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 20:49:56.102 MST [4380] ERROR:  insert or update on table "consistsof" violates foreign key constraint "consistsof_gameid_fkey"
+2022-10-27 20:49:56.102 MST [4380] DETAIL:  Key (gameid)=(6805) is not present in table "games".
+2022-10-27 20:49:56.102 MST [4380] STATEMENT:  INSERT INTO consistsof (id, gameID, franchiseID) VALUES(1, 6805, 545)
+2022-10-27 20:49:56.107 MST [4380] ERROR:  insert or update on table "consistsof" violates foreign key constraint "consistsof_gameid_fkey"
+2022-10-27 20:49:56.107 MST [4380] DETAIL:  Key (gameid)=(9626) is not present in table "games".
+2022-10-27 20:49:56.107 MST [4380] STATEMENT:  INSERT INTO consistsof (id, gameID, franchiseID) VALUES(2, 9626, 545)
+2022-10-27 20:49:56.128 MST [4380] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 20:51:39.727 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 20:51:57.070 MST [3984] LOG:  checkpoint complete: wrote 157 buffers (1.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=15.673 s, sync=0.872 s, total=17.343 s; sync files=63, longest=0.058 s, average=0.014 s; distance=1579 kB, estimate=1579 kB
+2022-10-27 20:56:28.052 MST [9144] ERROR:  column "developed" of relation "franchise" does not exist at character 28
+2022-10-27 20:56:28.052 MST [9144] STATEMENT:  INSERT INTO franchise (id, developed, name, published, country) VALUES(13710, ARRAY[74974,74975,74977], 'Tomolo Games', NULL, 752)
+2022-10-27 20:56:28.067 MST [9144] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 20:56:39.071 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 20:56:50.102 MST [3984] LOG:  checkpoint complete: wrote 107 buffers (0.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=10.464 s, sync=0.457 s, total=11.031 s; sync files=47, longest=0.051 s, average=0.010 s; distance=950 kB, estimate=1516 kB
+2022-10-27 20:57:27.147 MST [3116] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 20:58:12.072 MST [17052] ERROR:  syntax error at or near "SELECT" at character 23
+2022-10-27 20:58:12.072 MST [17052] STATEMENT:  SELECT * FROM "games"
+	SELECT * FROM "games";
+2022-10-27 21:01:39.103 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:01:49.038 MST [3984] LOG:  checkpoint complete: wrote 96 buffers (0.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.542 s, sync=0.267 s, total=9.935 s; sync files=23, longest=0.035 s, average=0.012 s; distance=286 kB, estimate=1393 kB
+2022-10-27 21:05:07.435 MST [15188] ERROR:  column "developed" of relation "franchise" does not exist at character 28
+2022-10-27 21:05:07.435 MST [15188] STATEMENT:  INSERT INTO franchise (id, developed, name, published, country) VALUES(13710, ARRAY[74974,74975,74977], 'Tomolo Games', NULL, 752)
+2022-10-27 21:05:07.449 MST [15188] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:06:31.293 MST [19264] ERROR:  relation "company" already exists
+2022-10-27 21:06:31.293 MST [19264] STATEMENT:  CREATE TABLE company (id int NOT NULL PRIMARY KEY, name varchar(255), developed int[], country varchar(255), published int[])
+2022-10-27 21:06:31.308 MST [19264] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:06:39.038 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:06:50.605 MST [3984] LOG:  checkpoint complete: wrote 109 buffers (0.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=10.798 s, sync=0.653 s, total=11.567 s; sync files=51, longest=0.056 s, average=0.013 s; distance=1386 kB, estimate=1392 kB
+2022-10-27 21:06:59.040 MST [3140] ERROR:  table "involvedwith" does not exist
+2022-10-27 21:06:59.040 MST [3140] STATEMENT:  DROP TABLE involvedwith CASCADE
+2022-10-27 21:06:59.055 MST [3140] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:07:13.594 MST [3176] ERROR:  table "games" does not exist
+2022-10-27 21:07:13.594 MST [3176] STATEMENT:  DROP TABLE games CASCADE
+2022-10-27 21:07:13.608 MST [3176] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:07:38.556 MST [18812] ERROR:  column "developed" of relation "franchise" does not exist at character 28
+2022-10-27 21:07:38.556 MST [18812] STATEMENT:  INSERT INTO franchise (id, developed, name, published, country) VALUES(13710, ARRAY[74974,74975,74977], 'Tomolo Games', NULL, 752)
+2022-10-27 21:07:38.573 MST [18812] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:07:52.570 MST [16088] ERROR:  column "developed" of relation "franchise" does not exist at character 28
+2022-10-27 21:07:52.570 MST [16088] STATEMENT:  INSERT INTO franchise (id, developed, name, published, country) VALUES(13710, ARRAY[74974,74975,74977], 'Tomolo Games', NULL, 752)
+2022-10-27 21:07:52.590 MST [16088] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:09:05.940 MST [13288] ERROR:  column "undefined" does not exist at character 117
+2022-10-27 21:09:05.940 MST [13288] STATEMENT:  INSERT INTO company (id, name, developed, country, published) VALUES(15775, 'Vertical Reach', ARRAY[104233,104237], undefined, ARRAY[89168,104233])
+2022-10-27 21:09:05.940 MST [13288] ERROR:  column "undefined" does not exist at character 127
+2022-10-27 21:09:05.940 MST [13288] STATEMENT:  INSERT INTO company (id, name, developed, country, published) VALUES(558, 'FASA Studio', ARRAY[5793,19192,19194,71752,78009], undefined, NULL)
+2022-10-27 21:09:05.962 MST [13288] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:09:42.596 MST [7992] ERROR:  duplicate key value violates unique constraint "franchise_pkey"
+2022-10-27 21:09:42.596 MST [7992] DETAIL:  Key (id)=(889) already exists.
+2022-10-27 21:09:42.596 MST [7992] STATEMENT:  INSERT INTO franchise (id, games, name) VALUES(889, ARRAY[2368], 'Steady Hand McDuff')
+2022-10-27 21:09:42.614 MST [7992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:09:53.453 MST [18492] ERROR:  column "undefined" does not exist at character 117
+2022-10-27 21:09:53.453 MST [18492] STATEMENT:  INSERT INTO company (id, name, developed, country, published) VALUES(15775, 'Vertical Reach', ARRAY[104233,104237], undefined, ARRAY[89168,104233])
+2022-10-27 21:09:53.467 MST [18492] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:10:21.079 MST [18100] ERROR:  column "undefined" does not exist at character 117
+2022-10-27 21:10:21.079 MST [18100] STATEMENT:  INSERT INTO company (id, name, developed, country, published) VALUES(15775, 'Vertical Reach', ARRAY[104233,104237], undefined, ARRAY[89168,104233])
+2022-10-27 21:10:21.080 MST [18100] ERROR:  column "undefined" does not exist at character 127
+2022-10-27 21:10:21.080 MST [18100] STATEMENT:  INSERT INTO company (id, name, developed, country, published) VALUES(558, 'FASA Studio', ARRAY[5793,19192,19194,71752,78009], undefined, NULL)
+2022-10-27 21:10:21.097 MST [18100] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:10:37.623 MST [13444] ERROR:  column "undefined" does not exist at character 117
+2022-10-27 21:10:37.623 MST [13444] STATEMENT:  INSERT INTO company (id, name, developed, country, published) VALUES(15775, 'Vertical Reach', ARRAY[104233,104237], undefined, ARRAY[89168,104233])
+2022-10-27 21:10:37.624 MST [13444] ERROR:  column "undefined" does not exist at character 127
+2022-10-27 21:10:37.624 MST [13444] STATEMENT:  INSERT INTO company (id, name, developed, country, published) VALUES(558, 'FASA Studio', ARRAY[5793,19192,19194,71752,78009], undefined, NULL)
+2022-10-27 21:10:37.637 MST [13444] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:10:58.866 MST [11940] ERROR:  column "undefined" does not exist at character 117
+2022-10-27 21:10:58.866 MST [11940] STATEMENT:  INSERT INTO company (id, name, developed, country, published) VALUES(15775, 'Vertical Reach', ARRAY[104233,104237], undefined, ARRAY[89168,104233])
+2022-10-27 21:10:58.884 MST [11940] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:11:39.606 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:11:56.069 MST [4632] ERROR:  column "undefined" does not exist at character 117
+2022-10-27 21:11:56.069 MST [4632] STATEMENT:  INSERT INTO company (id, name, developed, country, published) VALUES(15775, 'Vertical Reach', ARRAY[104233,104237], undefined, ARRAY[89168,104233])
+2022-10-27 21:11:56.087 MST [4632] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:12:03.446 MST [3984] LOG:  checkpoint complete: wrote 191 buffers (1.2%); 0 WAL file(s) added, 0 removed, 1 recycled; write=22.730 s, sync=0.927 s, total=23.841 s; sync files=120, longest=0.047 s, average=0.008 s; distance=7016 kB, estimate=7016 kB
+2022-10-27 21:12:10.604 MST [5472] ERROR:  duplicate key value violates unique constraint "franchise_pkey"
+2022-10-27 21:12:10.604 MST [5472] DETAIL:  Key (id)=(889) already exists.
+2022-10-27 21:12:10.604 MST [5472] STATEMENT:  INSERT INTO franchise (id, games, name) VALUES(889, ARRAY[2368], 'Steady Hand McDuff')
+2022-10-27 21:12:10.619 MST [5472] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:14:11.611 MST [11532] ERROR:  duplicate key value violates unique constraint "franchise_pkey"
+2022-10-27 21:14:11.611 MST [11532] DETAIL:  Key (id)=(889) already exists.
+2022-10-27 21:14:11.611 MST [11532] STATEMENT:  INSERT INTO franchise (id, games, name) VALUES(889, ARRAY[2368], 'Steady Hand McDuff')
+2022-10-27 21:14:11.635 MST [11532] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:14:32.003 MST [2024] ERROR:  duplicate key value violates unique constraint "franchise_pkey"
+2022-10-27 21:14:32.003 MST [2024] DETAIL:  Key (id)=(889) already exists.
+2022-10-27 21:14:32.003 MST [2024] STATEMENT:  INSERT INTO franchise (id, games, name) VALUES(889, ARRAY[2368], 'Steady Hand McDuff')
+2022-10-27 21:14:32.019 MST [2024] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:14:52.461 MST [18912] ERROR:  duplicate key value violates unique constraint "franchise_pkey"
+2022-10-27 21:14:52.461 MST [18912] DETAIL:  Key (id)=(889) already exists.
+2022-10-27 21:14:52.461 MST [18912] STATEMENT:  INSERT INTO franchise (id, games, name) VALUES(889, ARRAY[2368], 'Steady Hand McDuff')
+2022-10-27 21:14:52.477 MST [18912] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:16:39.447 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:17:02.582 MST [3984] LOG:  checkpoint complete: wrote 220 buffers (1.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=21.414 s, sync=1.584 s, total=23.136 s; sync files=88, longest=0.057 s, average=0.018 s; distance=5052 kB, estimate=6820 kB
+2022-10-27 21:17:17.288 MST [16380] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:17:17.288 MST [16380] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:17:17.300 MST [16380] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:20:02.068 MST [17052] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:21:39.584 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:22:00.284 MST [3984] LOG:  checkpoint complete: wrote 201 buffers (1.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=20.024 s, sync=0.563 s, total=20.701 s; sync files=60, longest=0.056 s, average=0.010 s; distance=1479 kB, estimate=6285 kB
+2022-10-27 21:22:47.538 MST [10004] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:22:47.538 MST [10004] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:22:47.549 MST [10004] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:25:54.094 MST [7372] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:25:54.094 MST [7372] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:25:54.094 MST [7372] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:25:54.094 MST [7372] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:25:54.108 MST [7372] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:26:17.823 MST [11532] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:26:17.823 MST [11532] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:26:17.838 MST [11532] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:26:39.285 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:26:59.643 MST [3984] LOG:  checkpoint complete: wrote 201 buffers (1.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=19.553 s, sync=0.684 s, total=20.358 s; sync files=80, longest=0.039 s, average=0.009 s; distance=3189 kB, estimate=5976 kB
+2022-10-27 21:27:03.271 MST [21140] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:27:03.271 MST [21140] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:27:03.275 MST [21140] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:27:03.275 MST [21140] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:27:03.289 MST [21140] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:27:35.461 MST [18208] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:27:35.461 MST [18208] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:27:35.477 MST [18208] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:28:03.394 MST [13236] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:28:03.394 MST [13236] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:28:03.398 MST [13236] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:28:03.398 MST [13236] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:28:03.411 MST [13236] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:28:21.217 MST [21308] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:28:21.217 MST [21308] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:28:21.238 MST [21308] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:28:41.746 MST [4104] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:28:41.746 MST [4104] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:28:41.759 MST [4104] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:29:08.633 MST [16364] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:29:08.633 MST [16364] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:29:08.648 MST [16364] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:29:21.416 MST [14768] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:29:21.416 MST [14768] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:29:21.434 MST [14768] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:29:32.687 MST [17664] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:29:32.687 MST [17664] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:29:32.701 MST [17664] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:30:11.442 MST [20276] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:30:11.442 MST [20276] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:30:11.456 MST [20276] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:30:30.380 MST [21224] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:30:30.380 MST [21224] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:30:30.395 MST [21224] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:30:40.913 MST [19648] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:30:40.913 MST [19648] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:30:40.930 MST [19648] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:30:54.881 MST [12528] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:30:54.881 MST [12528] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:30:54.896 MST [12528] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:31:04.655 MST [1108] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:31:04.655 MST [1108] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:31:04.667 MST [1108] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:31:39.644 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:32:04.592 MST [3984] LOG:  checkpoint complete: wrote 256 buffers (1.6%); 0 WAL file(s) added, 0 removed, 1 recycled; write=23.829 s, sync=0.921 s, total=24.948 s; sync files=160, longest=0.053 s, average=0.006 s; distance=11898 kB, estimate=11898 kB
+2022-10-27 21:32:42.055 MST [17068] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:32:42.055 MST [17068] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:32:42.069 MST [17068] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:33:13.949 MST [11224] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:33:13.949 MST [11224] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:33:13.962 MST [11224] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:33:56.573 MST [15708] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:33:56.573 MST [15708] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:33:56.586 MST [15708] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:34:21.943 MST [2408] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:34:21.943 MST [2408] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:34:21.947 MST [2408] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:34:21.947 MST [2408] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:34:21.959 MST [2408] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:35:28.841 MST [4232] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:35:28.841 MST [4232] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:35:28.855 MST [4232] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:35:52.327 MST [19744] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:35:52.327 MST [19744] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:35:52.342 MST [19744] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:36:09.150 MST [14852] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:36:09.150 MST [14852] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:36:09.166 MST [14852] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:36:17.888 MST [14144] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:36:17.888 MST [14144] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:36:17.900 MST [14144] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:36:25.644 MST [14300] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:36:25.644 MST [14300] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:36:25.649 MST [14300] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:36:25.649 MST [14300] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:36:25.665 MST [14300] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:36:39.597 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:37:03.179 MST [3984] LOG:  checkpoint complete: wrote 224 buffers (1.4%); 0 WAL file(s) added, 0 removed, 1 recycled; write=21.336 s, sync=1.986 s, total=23.582 s; sync files=128, longest=0.083 s, average=0.016 s; distance=8401 kB, estimate=11549 kB
+2022-10-27 21:37:13.601 MST [18656] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:37:13.601 MST [18656] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:37:13.616 MST [18656] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:37:22.459 MST [18732] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:37:22.459 MST [18732] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:37:22.480 MST [18732] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:37:29.554 MST [2448] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:37:29.554 MST [2448] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:37:29.568 MST [2448] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:37:35.022 MST [13236] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:37:35.022 MST [13236] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:37:35.036 MST [13236] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:38:58.963 MST [13824] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:38:58.963 MST [13824] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:38:58.978 MST [13824] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:39:07.283 MST [20576] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:39:07.283 MST [20576] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:39:07.284 MST [20576] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:39:07.284 MST [20576] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:39:07.302 MST [20576] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:39:29.745 MST [18376] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:39:29.745 MST [18376] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:39:29.759 MST [18376] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:39:36.362 MST [9868] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:39:36.362 MST [9868] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:39:36.379 MST [9868] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:39:58.677 MST [18012] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:39:58.677 MST [18012] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:39:58.694 MST [18012] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:40:03.766 MST [17952] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:40:03.766 MST [17952] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:40:03.781 MST [17952] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:40:39.284 MST [15224] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:40:39.284 MST [15224] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:40:39.285 MST [15224] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:40:39.285 MST [15224] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:40:39.296 MST [15224] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:40:54.455 MST [11228] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:40:54.455 MST [11228] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:40:54.473 MST [11228] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:41:05.600 MST [3784] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:41:05.600 MST [3784] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:41:05.600 MST [3784] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:41:05.600 MST [3784] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:41:05.612 MST [3784] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:41:39.182 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:42:03.437 MST [3984] LOG:  checkpoint complete: wrote 252 buffers (1.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=23.248 s, sync=0.841 s, total=24.256 s; sync files=161, longest=0.040 s, average=0.006 s; distance=11961 kB, estimate=11961 kB
+2022-10-27 21:42:20.405 MST [7000] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:42:20.405 MST [7000] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:42:20.420 MST [7000] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:42:48.653 MST [15328] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:42:48.653 MST [15328] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:42:48.670 MST [15328] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:43:15.301 MST [13040] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:43:15.301 MST [13040] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:43:15.302 MST [13040] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:43:15.302 MST [13040] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:43:15.321 MST [13040] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:43:22.035 MST [11412] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:43:22.035 MST [11412] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:43:22.050 MST [11412] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:43:38.347 MST [20188] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:43:38.347 MST [20188] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:43:38.358 MST [20188] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:43:47.585 MST [10996] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:43:47.585 MST [10996] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:43:47.614 MST [10996] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:43:56.072 MST [17744] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:43:56.072 MST [17744] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:43:56.088 MST [17744] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:44:03.010 MST [15672] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:44:03.010 MST [15672] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:44:03.022 MST [15672] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:44:17.981 MST [17644] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:44:17.981 MST [17644] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:44:17.993 MST [17644] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:44:22.524 MST [3896] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:44:22.524 MST [3896] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:44:22.525 MST [3896] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:44:22.525 MST [3896] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:44:22.537 MST [3896] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:46:04.096 MST [4300] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:46:04.096 MST [4300] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:46:04.096 MST [4300] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:46:04.096 MST [4300] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:46:04.114 MST [4300] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:46:39.439 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:47:05.435 MST [3984] LOG:  checkpoint complete: wrote 264 buffers (1.6%); 0 WAL file(s) added, 0 removed, 1 recycled; write=24.818 s, sync=0.955 s, total=25.997 s; sync files=145, longest=0.047 s, average=0.007 s; distance=9985 kB, estimate=11764 kB
+2022-10-27 21:47:58.566 MST [19364] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:47:58.566 MST [19364] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:47:58.590 MST [19364] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:49:23.071 MST [8052] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:49:23.071 MST [8052] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:49:23.072 MST [8052] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:49:23.072 MST [8052] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:49:23.088 MST [8052] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:49:29.319 MST [12992] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:49:29.319 MST [12992] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:49:29.339 MST [12992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:49:37.865 MST [7648] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:49:37.865 MST [7648] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:49:37.879 MST [7648] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:49:54.849 MST [3972] ERROR:  syntax error at or near "SELECT" at character 27
+2022-10-27 21:49:54.849 MST [3972] STATEMENT:  SELECT * FROM "agerating"
+	SELECT * FROM "agerating";
+2022-10-27 21:50:21.864 MST [3972] ERROR:  relation "companies" does not exist at character 15
+2022-10-27 21:50:21.864 MST [3972] STATEMENT:  SELECT * FROM "companies";
+2022-10-27 21:51:36.172 MST [1576] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:51:36.172 MST [1576] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:51:36.184 MST [1576] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:51:39.437 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:51:47.338 MST [10352] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:51:47.338 MST [10352] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:51:47.350 MST [10352] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:52:01.021 MST [3984] LOG:  checkpoint complete: wrote 163 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=20.642 s, sync=0.807 s, total=21.585 s; sync files=102, longest=0.051 s, average=0.008 s; distance=4845 kB, estimate=11072 kB
+2022-10-27 21:52:11.881 MST [3972] ERROR:  relation "ageratings" does not exist at character 15
+2022-10-27 21:52:11.881 MST [3972] STATEMENT:  SELECT * FROM "ageratings";
+2022-10-27 21:53:18.940 MST [8848] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:53:18.940 MST [8848] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:53:18.952 MST [8848] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:54:10.227 MST [11764] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:54:10.227 MST [11764] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:54:10.240 MST [11764] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:54:35.225 MST [15400] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:54:35.225 MST [15400] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:54:35.239 MST [15400] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:55:34.808 MST [12992] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:55:34.808 MST [12992] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:55:34.819 MST [12992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:56:00.517 MST [2272] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:56:00.517 MST [2272] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:56:00.518 MST [2272] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:56:00.518 MST [2272] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:56:00.535 MST [2272] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:56:39.023 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 21:57:01.758 MST [3984] LOG:  checkpoint complete: wrote 220 buffers (1.3%); 0 WAL file(s) added, 0 removed, 1 recycled; write=21.139 s, sync=1.443 s, total=22.735 s; sync files=96, longest=0.055 s, average=0.016 s; distance=5850 kB, estimate=10550 kB
+2022-10-27 21:57:33.461 MST [20888] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:57:33.461 MST [20888] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:57:33.473 MST [20888] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:57:46.431 MST [20780] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:57:46.431 MST [20780] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:57:46.432 MST [20780] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 21:57:46.432 MST [20780] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 21:57:46.443 MST [20780] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:58:49.498 MST [12392] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:58:49.498 MST [12392] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:58:49.513 MST [12392] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 21:59:16.232 MST [21052] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 21:59:16.232 MST [21052] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 21:59:16.245 MST [21052] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:00:13.009 MST [5152] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:00:13.009 MST [5152] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:00:13.010 MST [5152] ERROR:  relation "appearsin" does not exist at character 13
+2022-10-27 22:00:13.010 MST [5152] STATEMENT:  INSERT INTO appearsin (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:00:13.025 MST [5152] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:00:49.098 MST [11052] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:00:49.098 MST [11052] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:00:49.126 MST [11052] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:01:03.853 MST [15044] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:01:03.853 MST [15044] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:01:03.866 MST [15044] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:01:35.961 MST [3972] ERROR:  relation "appearsin" does not exist at character 15
+2022-10-27 22:01:35.961 MST [3972] STATEMENT:  SELECT * from "appearsin";
+2022-10-27 22:01:39.760 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:01:54.480 MST [2420] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:01:54.480 MST [2420] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:01:54.498 MST [2420] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:02:02.923 MST [3984] LOG:  checkpoint complete: wrote 177 buffers (1.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=22.191 s, sync=0.829 s, total=23.164 s; sync files=119, longest=0.051 s, average=0.007 s; distance=6662 kB, estimate=10161 kB
+2022-10-27 22:03:03.122 MST [15212] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:03:03.122 MST [15212] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:03:03.138 MST [15212] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:03:44.986 MST [18312] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:03:44.986 MST [18312] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:03:45.000 MST [18312] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:04:05.759 MST [13644] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:04:05.759 MST [13644] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:04:05.771 MST [13644] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:04:32.673 MST [9712] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:04:32.673 MST [9712] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:04:32.688 MST [9712] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:04:41.166 MST [10016] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:04:41.166 MST [10016] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:04:41.184 MST [10016] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:06:39.924 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:06:57.002 MST [14660] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:06:57.002 MST [14660] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:06:57.005 MST [14660] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:06:57.005 MST [14660] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:06:57.005 MST [14660] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:06:57.017 MST [14660] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:07:01.742 MST [3984] LOG:  checkpoint complete: wrote 164 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=21.024 s, sync=0.652 s, total=21.818 s; sync files=104, longest=0.044 s, average=0.007 s; distance=5798 kB, estimate=9725 kB
+2022-10-27 22:07:18.941 MST [18016] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:07:18.941 MST [18016] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:07:18.945 MST [18016] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:07:18.945 MST [18016] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:07:18.945 MST [18016] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:07:18.957 MST [18016] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:08:00.625 MST [19300] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:08:00.625 MST [19300] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:08:00.628 MST [19300] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:08:00.628 MST [19300] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:08:00.628 MST [19300] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:08:00.643 MST [19300] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:09:45.632 MST [2520] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:09:45.632 MST [2520] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:09:45.635 MST [2520] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:09:45.635 MST [2520] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:09:45.635 MST [2520] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:09:45.649 MST [2520] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:10:02.648 MST [1896] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:10:02.648 MST [1896] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:10:02.651 MST [1896] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:10:02.651 MST [1896] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:10:02.651 MST [1896] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:10:02.662 MST [1896] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:10:22.439 MST [17192] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:10:22.439 MST [17192] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:10:22.442 MST [17192] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:10:22.442 MST [17192] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:10:22.442 MST [17192] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:10:22.453 MST [17192] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:10:34.786 MST [8844] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:10:34.786 MST [8844] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:10:34.789 MST [8844] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:10:34.789 MST [8844] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:10:34.789 MST [8844] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:10:34.801 MST [8844] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:10:53.125 MST [20500] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:10:53.125 MST [20500] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:10:53.131 MST [20500] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:10:53.131 MST [20500] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:10:53.131 MST [20500] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:10:53.144 MST [20500] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:11:39.755 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:12:05.118 MST [3984] LOG:  checkpoint complete: wrote 239 buffers (1.5%); 0 WAL file(s) added, 0 removed, 1 recycled; write=24.508 s, sync=0.678 s, total=25.363 s; sync files=126, longest=0.042 s, average=0.006 s; distance=7531 kB, estimate=9505 kB
+2022-10-27 22:20:48.726 MST [18292] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:21:21.379 MST [13380] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:21:37.454 MST [2420] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:21:39.126 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:21:52.632 MST [21440] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:21:57.524 MST [3984] LOG:  checkpoint complete: wrote 128 buffers (0.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=17.870 s, sync=0.416 s, total=18.399 s; sync files=83, longest=0.024 s, average=0.005 s; distance=2647 kB, estimate=8819 kB
+2022-10-27 22:22:17.288 MST [20492] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:24:01.806 MST [9424] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:24:18.711 MST [18056] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:25:44.562 MST [768] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:26:26.420 MST [10848] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:26:39.529 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:27:01.627 MST [3984] LOG:  checkpoint complete: wrote 206 buffers (1.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=21.379 s, sync=0.596 s, total=22.098 s; sync files=94, longest=0.037 s, average=0.007 s; distance=5018 kB, estimate=8439 kB
+2022-10-27 22:27:24.101 MST [3012] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:27:53.380 MST [17428] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:31:21.521 MST [16048] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:31:39.639 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:31:50.029 MST [19516] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:32:00.148 MST [3984] LOG:  checkpoint complete: wrote 135 buffers (0.8%); 0 WAL file(s) added, 0 removed, 1 recycled; write=18.901 s, sync=1.443 s, total=20.509 s; sync files=83, longest=0.073 s, average=0.018 s; distance=2737 kB, estimate=7869 kB
+2022-10-27 22:33:22.266 MST [15572] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:35:43.894 MST [3000] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:36:39.160 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:36:46.491 MST [18252] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:37:01.356 MST [3984] LOG:  checkpoint complete: wrote 147 buffers (0.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=20.309 s, sync=1.772 s, total=22.196 s; sync files=76, longest=0.082 s, average=0.024 s; distance=2853 kB, estimate=7367 kB
+2022-10-27 22:37:05.201 MST [10644] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:40:17.116 MST [9540] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:40:41.457 MST [10436] ERROR:  insert or update on table "involvedwith" violates foreign key constraint "involvedwith_gameid_fkey"
+2022-10-27 22:40:41.457 MST [10436] DETAIL:  Key (gameid)=(74974) is not present in table "games".
+2022-10-27 22:40:41.457 MST [10436] STATEMENT:  INSERT INTO involvedwith (id, gameID, companyID) VALUES(1, 74974, 13710)
+2022-10-27 22:40:41.471 MST [10436] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:41:39.368 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:41:42.119 MST [20368] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:42:03.347 MST [3984] LOG:  checkpoint complete: wrote 224 buffers (1.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=23.227 s, sync=0.620 s, total=23.980 s; sync files=91, longest=0.037 s, average=0.007 s; distance=4709 kB, estimate=7102 kB
+2022-10-27 22:42:32.042 MST [7472] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:42:32.042 MST [7472] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:42:32.046 MST [7472] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:42:32.046 MST [7472] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:42:32.046 MST [7472] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:42:32.058 MST [7472] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:43:57.699 MST [13736] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:43:57.699 MST [13736] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:43:57.909 MST [13736] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:43:57.909 MST [13736] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:43:57.909 MST [13736] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:43:57.923 MST [13736] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:45:00.023 MST [6992] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:45:00.023 MST [6992] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:45:00.132 MST [6992] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_characterid_fkey"
+2022-10-27 22:45:00.132 MST [6992] DETAIL:  Key (characterid)=(13116) is not present in table "character".
+2022-10-27 22:45:00.132 MST [6992] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:45:00.189 MST [6992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:46:14.292 MST [3888] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:46:14.292 MST [3888] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:46:14.432 MST [3888] ERROR:  trailing junk after numeric literal at or near "14447N" at character 41
+2022-10-27 22:46:14.432 MST [3888] STATEMENT:  INSERT INTO character (id, name) VALUES(14447NaN'Agent Carson')
+2022-10-27 22:46:14.446 MST [3888] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:46:39.352 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:47:02.793 MST [3984] LOG:  checkpoint complete: wrote 218 buffers (1.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=22.706 s, sync=0.606 s, total=23.441 s; sync files=103, longest=0.028 s, average=0.006 s; distance=4735 kB, estimate=6865 kB
+2022-10-27 22:47:46.822 MST [13572] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:47:46.822 MST [13572] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:47:46.940 MST [13572] ERROR:  trailing junk after numeric literal at or near "14447N" at character 41
+2022-10-27 22:47:46.940 MST [13572] STATEMENT:  INSERT INTO character (id, name) VALUES(14447NaN'Agent Carson')
+2022-10-27 22:47:46.955 MST [13572] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:48:52.914 MST [20392] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:48:52.914 MST [20392] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:48:53.055 MST [20392] ERROR:  trailing junk after numeric literal at or near "14447N" at character 41
+2022-10-27 22:48:53.055 MST [20392] STATEMENT:  INSERT INTO character (id, name) VALUES(14447NaN'Agent Carson')
+2022-10-27 22:48:53.070 MST [20392] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:51:05.577 MST [18796] ERROR:  syntax error at or near "parseInt" at character 50
+2022-10-27 22:51:05.577 MST [18796] STATEMENT:  INSERT INTO character (id, name) VALUES(function parseInt() { [native code] }NaN'Nuclear Launch Silo')
+2022-10-27 22:51:05.787 MST [18796] ERROR:  syntax error at or near "parseInt" at character 50
+2022-10-27 22:51:05.787 MST [18796] STATEMENT:  INSERT INTO character (id, name) VALUES(function parseInt() { [native code] }NaN'Agent Carson')
+2022-10-27 22:51:05.825 MST [18796] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:51:17.251 MST [20452] ERROR:  trailing junk after numeric literal at or near "13116N" at character 41
+2022-10-27 22:51:17.251 MST [20452] STATEMENT:  INSERT INTO character (id, name) VALUES(13116NaN'Nuclear Launch Silo')
+2022-10-27 22:51:17.454 MST [20452] ERROR:  trailing junk after numeric literal at or near "14447N" at character 41
+2022-10-27 22:51:17.454 MST [20452] STATEMENT:  INSERT INTO character (id, name) VALUES(14447NaN'Agent Carson')
+2022-10-27 22:51:17.484 MST [20452] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:51:39.795 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:51:43.206 MST [20780] ERROR:  duplicate key value violates unique constraint "franchise_pkey"
+2022-10-27 22:51:43.206 MST [20780] DETAIL:  Key (id)=(158) already exists.
+2022-10-27 22:51:43.206 MST [20780] STATEMENT:  INSERT INTO franchise (id, name) VALUES(158, 'Commodore CDTV')
+2022-10-27 22:51:43.221 MST [20780] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:52:04.269 MST [3984] LOG:  checkpoint complete: wrote 186 buffers (1.1%); 0 WAL file(s) added, 0 removed, 1 recycled; write=22.042 s, sync=2.214 s, total=24.474 s; sync files=112, longest=0.055 s, average=0.020 s; distance=5713 kB, estimate=6750 kB
+2022-10-27 22:52:06.449 MST [16444] ERROR:  duplicate key value violates unique constraint "franchise_pkey"
+2022-10-27 22:52:06.449 MST [16444] DETAIL:  Key (id)=(158) already exists.
+2022-10-27 22:52:06.449 MST [16444] STATEMENT:  INSERT INTO franchise (id, name) VALUES(158, 'Commodore CDTV')
+2022-10-27 22:52:06.462 MST [16444] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:52:32.799 MST [22204] ERROR:  insert or update on table "appears" violates foreign key constraint "appears_gameid_fkey"
+2022-10-27 22:52:32.799 MST [22204] DETAIL:  Key (gameid)=(103020) is not present in table "games".
+2022-10-27 22:52:32.799 MST [22204] STATEMENT:  INSERT INTO Appears (id, characterID, gameID) VALUES(1, 13116, 103020)
+2022-10-27 22:52:32.813 MST [22204] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:53:07.621 MST [21784] ERROR:  duplicate key value violates unique constraint "franchise_pkey"
+2022-10-27 22:53:07.621 MST [21784] DETAIL:  Key (id)=(158) already exists.
+2022-10-27 22:53:07.621 MST [21784] STATEMENT:  INSERT INTO franchise (id, name) VALUES(158, 'Commodore CDTV')
+2022-10-27 22:53:07.636 MST [21784] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:53:51.242 MST [3972] ERROR:  relation "ageratings" does not exist at character 15
+2022-10-27 22:53:51.242 MST [3972] STATEMENT:  SELECT * FROM "ageratings";
+2022-10-27 22:56:06.717 MST [13240] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 22:56:39.273 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 22:57:07.143 MST [3984] LOG:  checkpoint complete: wrote 254 buffers (1.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=26.405 s, sync=1.338 s, total=27.871 s; sync files=121, longest=0.076 s, average=0.012 s; distance=5749 kB, estimate=6650 kB
+2022-10-27 23:01:39.154 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 23:01:43.128 MST [3984] LOG:  checkpoint complete: wrote 34 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.675 s, sync=0.172 s, total=3.974 s; sync files=5, longest=0.067 s, average=0.035 s; distance=139 kB, estimate=5999 kB
+2022-10-27 23:03:03.813 MST [21856] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:03:46.146 MST [3972] ERROR:  relation "hasReleaseDate" does not exist at character 15
+2022-10-27 23:03:46.146 MST [3972] STATEMENT:  SELECT * FROM "hasReleaseDate";
+2022-10-27 23:03:54.675 MST [3972] ERROR:  relation "hasReleaseDate" does not exist at character 15
+2022-10-27 23:03:54.675 MST [3972] STATEMENT:  SELECT * FROM "hasReleaseDate";
+2022-10-27 23:04:02.357 MST [21996] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:04:16.843 MST [3972] ERROR:  relation "hasReleaseDate" does not exist at character 15
+2022-10-27 23:04:16.843 MST [3972] STATEMENT:  SELECT * FROM "hasReleaseDate";
+2022-10-27 23:06:39.129 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 23:06:39.380 MST [15220] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:07:05.871 MST [3984] LOG:  checkpoint complete: wrote 251 buffers (1.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=25.925 s, sync=0.689 s, total=26.743 s; sync files=118, longest=0.032 s, average=0.006 s; distance=4859 kB, estimate=5885 kB
+2022-10-27 23:07:46.337 MST [21580] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:08:22.673 MST [22024] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:09:03.363 MST [21648] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:10:30.397 MST [16060] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:10:51.485 MST [21512] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:11:39.885 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 23:11:50.076 MST [11672] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:12:10.272 MST [3984] LOG:  checkpoint complete: wrote 181 buffers (1.1%); 0 WAL file(s) added, 0 removed, 1 recycled; write=28.297 s, sync=1.897 s, total=30.388 s; sync files=176, longest=0.042 s, average=0.011 s; distance=7851 kB, estimate=7851 kB
+2022-10-27 23:12:14.618 MST [17748] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:12:44.331 MST [21832] ERROR:  insert or update on table "hasreleasedate" violates foreign key constraint "hasreleasedate_gameid_fkey"
+2022-10-27 23:12:44.331 MST [21832] DETAIL:  Key (gameid)=(76870) is not present in table "games".
+2022-10-27 23:12:44.331 MST [21832] STATEMENT:  INSERT INTO hasReleaseDate (id, gameID, platformID, releaseID) VALUES(0, 76870, 48, 170111)
+2022-10-27 23:12:44.359 MST [21832] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:13:29.870 MST [14924] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:14:03.207 MST [22028] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:14:20.093 MST [22424] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:14:31.028 MST [3972] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-27 23:16:39.279 MST [3984] LOG:  checkpoint starting: time
+2022-10-27 23:17:08.730 MST [3984] LOG:  checkpoint complete: wrote 282 buffers (1.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=28.587 s, sync=0.738 s, total=29.452 s; sync files=168, longest=0.035 s, average=0.005 s; distance=9277 kB, estimate=9277 kB
+2022-10-28 11:08:49.389 MST [3984] LOG:  checkpoint starting: time
+2022-10-28 11:08:49.885 MST [3984] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.330 s, sync=0.041 s, total=0.496 s; sync files=1, longest=0.041 s, average=0.041 s; distance=18 kB, estimate=8351 kB
+2022-10-28 11:13:49.886 MST [3984] LOG:  checkpoint starting: time
+2022-10-28 11:13:50.164 MST [3984] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.103 s, sync=0.054 s, total=0.279 s; sync files=1, longest=0.054 s, average=0.054 s; distance=6 kB, estimate=7517 kB
+2022-10-28 11:21:52.912 MST [25128] ERROR:  column "franchise.name" does not exist at character 8
+2022-10-28 11:21:52.912 MST [25128] STATEMENT:  SELECT "franchise.name" FROM "games", "franchise", "consistsof" WHERE "games.id"=="consistsof.gameid" AND "franchise.id"=="consistsof.franchiseid";
+2022-10-28 11:22:13.431 MST [25128] ERROR:  column reference "name" is ambiguous at character 8
+2022-10-28 11:22:13.431 MST [25128] STATEMENT:  SELECT "name" FROM "games", "franchise", "consistsof" WHERE "games.id"=="consistsof.gameid" AND "franchise.id"=="consistsof.franchiseid";
+2022-10-28 11:22:27.184 MST [25128] ERROR:  column "franchise(name)" does not exist at character 8
+2022-10-28 11:22:27.184 MST [25128] STATEMENT:  SELECT "franchise(name)" FROM "games", "franchise", "consistsof" WHERE "games.id"=="consistsof.gameid" AND "franchise.id"=="consistsof.franchiseid";
+2022-10-28 11:23:56.952 MST [25128] ERROR:  column "games.id" does not exist at character 67
+2022-10-28 11:23:56.952 MST [25128] HINT:  Perhaps you meant to reference the column "consistsof.gameid".
+2022-10-28 11:23:56.952 MST [25128] STATEMENT:  SELECT franchise.id FROM "games", "franchise", "consistsof" WHERE "games.id"=="consistsof.gameid" AND "franchise.id"=="consistsof.franchiseid";
+2022-10-28 11:24:22.728 MST [25128] ERROR:  operator does not exist: integer == integer at character 75
+2022-10-28 11:24:22.728 MST [25128] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2022-10-28 11:24:22.728 MST [25128] STATEMENT:  SELECT franchise.id FROM "games", "franchise", "consistsof" WHERE games.id==consistsof.gameid AND franchise.id==consistsof.franchiseid;
+2022-10-28 11:29:08.505 MST [25128] ERROR:  operator does not exist: integer[] = integer at character 81
+2022-10-28 11:29:08.505 MST [25128] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2022-10-28 11:29:08.505 MST [25128] STATEMENT:  SELECT games.name, platform.name FROM "games", "platform" WHERE games.platforms = platform.id;
+2022-10-28 11:30:23.997 MST [25128] ERROR:  column games.platform does not exist at character 81
+2022-10-28 11:30:23.997 MST [25128] HINT:  Perhaps you meant to reference the column "games.platforms".
+2022-10-28 11:30:23.997 MST [25128] STATEMENT:  SELECT games.name, platform.name FROM "games", "platform" WHERE platform.id=ANY(games.platform);
+2022-10-28 11:31:15.432 MST [25128] ERROR:  column games.platform does not exist at character 82
+2022-10-28 11:31:15.432 MST [25128] HINT:  Perhaps you meant to reference the column "games.platforms".
+2022-10-28 11:31:15.432 MST [25128] STATEMENT:  SELECT games.name, platform.name FROM "games", "platform" WHERE platform.id=ANY (games.platform);
+2022-10-28 11:33:16.449 MST [25128] ERROR:  missing FROM-clause entry for table "comapny" at character 111
+2022-10-28 11:33:16.449 MST [25128] STATEMENT:  SELECT company.name, games.name FROM "games", "company" WHERE games.id=ANY(company.published) OR games.id=ANY(comapny.developed);
+2022-10-28 11:37:00.603 MST [2404] ERROR:  duplicate key value violates unique constraint "consistsof_pkey"
+2022-10-28 11:37:00.603 MST [2404] DETAIL:  Key (id)=(1) already exists.
+2022-10-28 11:37:00.603 MST [2404] STATEMENT:  INSERT INTO consistsof (id, gameID, franchiseID) VALUES(1, 115464, 1375)
+2022-10-28 11:37:00.630 MST [2404] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:37:07.942 MST [23460] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:37:07.942 MST [23460] DETAIL:  Key (id)=(221705) already exists.
+2022-10-28 11:37:07.942 MST [23460] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(221705, NULL, NULL, NULL, NULL, NULL, NULL, 'Jungle Adventures 3', NULL)
+2022-10-28 11:37:07.948 MST [23460] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:37:07.948 MST [23460] DETAIL:  Key (id)=(221704) already exists.
+2022-10-28 11:37:07.948 MST [23460] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(221704, NULL, NULL, NULL, NULL, NULL, NULL, 'The Forest Adventurer', NULL)
+2022-10-28 11:37:07.968 MST [23460] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:38:49.201 MST [3984] LOG:  checkpoint starting: time
+2022-10-28 11:38:52.190 MST [11280] ERROR:  duplicate key value violates unique constraint "consistsof_pkey"
+2022-10-28 11:38:52.190 MST [11280] DETAIL:  Key (id)=(1) already exists.
+2022-10-28 11:38:52.190 MST [11280] STATEMENT:  INSERT INTO consistsof (id, gameID, franchiseID) VALUES(1, 94869, 1231)
+2022-10-28 11:38:52.211 MST [11280] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:38:52.733 MST [3984] LOG:  checkpoint complete: wrote 28 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.911 s, sync=0.537 s, total=3.532 s; sync files=14, longest=0.054 s, average=0.039 s; distance=201 kB, estimate=6785 kB
+2022-10-28 11:39:05.050 MST [22436] ERROR:  duplicate key value violates unique constraint "consistsof_pkey"
+2022-10-28 11:39:05.050 MST [22436] DETAIL:  Key (id)=(1) already exists.
+2022-10-28 11:39:05.050 MST [22436] STATEMENT:  INSERT INTO consistsof (id, gameID, franchiseID) VALUES(1, 67024, 1977)
+2022-10-28 11:39:05.051 MST [22436] ERROR:  duplicate key value violates unique constraint "consistsof_pkey"
+2022-10-28 11:39:05.051 MST [22436] DETAIL:  Key (id)=(2) already exists.
+2022-10-28 11:39:05.051 MST [22436] STATEMENT:  INSERT INTO consistsof (id, gameID, franchiseID) VALUES(2, 94144, 1977)
+2022-10-28 11:39:05.065 MST [22436] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:39:10.430 MST [15040] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:39:10.430 MST [15040] DETAIL:  Key (id)=(219960) already exists.
+2022-10-28 11:39:10.430 MST [15040] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(219960, NULL, NULL, NULL, NULL, NULL, NULL, 'Dawnlands', NULL)
+2022-10-28 11:39:10.436 MST [15040] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:39:10.436 MST [15040] DETAIL:  Key (id)=(219959) already exists.
+2022-10-28 11:39:10.436 MST [15040] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(219959, NULL, NULL, NULL, NULL, NULL, NULL, 'Upgrade Your Weapon: Shooter', NULL)
+2022-10-28 11:39:10.461 MST [15040] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:39:16.847 MST [11204] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:39:16.847 MST [11204] DETAIL:  Key (id)=(219960) already exists.
+2022-10-28 11:39:16.847 MST [11204] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(219960, NULL, NULL, NULL, NULL, NULL, NULL, 'Dawnlands', NULL)
+2022-10-28 11:39:16.852 MST [11204] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:39:16.852 MST [11204] DETAIL:  Key (id)=(219959) already exists.
+2022-10-28 11:39:16.852 MST [11204] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(219959, NULL, NULL, NULL, NULL, NULL, NULL, 'Upgrade Your Weapon: Shooter', NULL)
+2022-10-28 11:39:16.865 MST [11204] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:39:27.680 MST [25128] ERROR:  missing FROM-clause entry for table "comapny" at character 111
+2022-10-28 11:39:27.680 MST [25128] STATEMENT:  SELECT company.name, games.name FROM "games", "company" WHERE games.id=ANY(company.published) OR games.id=ANY(comapny.developed);
+2022-10-28 11:41:04.046 MST [18584] ERROR:  duplicate key value violates unique constraint "consistsof_pkey"
+2022-10-28 11:41:04.046 MST [18584] DETAIL:  Key (id)=(1) already exists.
+2022-10-28 11:41:04.046 MST [18584] STATEMENT:  INSERT INTO consistsof (id, gameID, franchiseID) VALUES(1, 1065, 891)
+2022-10-28 11:41:04.061 MST [18584] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:43:49.742 MST [3984] LOG:  checkpoint starting: time
+2022-10-28 11:43:56.688 MST [3984] LOG:  checkpoint complete: wrote 61 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.377 s, sync=0.456 s, total=6.946 s; sync files=15, longest=0.047 s, average=0.031 s; distance=482 kB, estimate=6155 kB
+2022-10-28 11:44:19.714 MST [21704] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:48:24.128 MST [26608] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:48:24.128 MST [26608] DETAIL:  Key (id)=(212600) already exists.
+2022-10-28 11:48:24.128 MST [26608] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(212600, ARRAY[10,32], NULL, NULL, NULL, NULL, NULL, 'Bomb Viking', NULL)
+2022-10-28 11:48:24.141 MST [26608] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:48:49.695 MST [3984] LOG:  checkpoint starting: time
+2022-10-28 11:49:05.548 MST [3984] LOG:  checkpoint complete: wrote 132 buffers (0.8%); 0 WAL file(s) added, 0 removed, 1 recycled; write=13.831 s, sync=1.747 s, total=15.854 s; sync files=52, longest=0.115 s, average=0.034 s; distance=2200 kB, estimate=5759 kB
+2022-10-28 11:49:14.751 MST [21156] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:49:40.988 MST [13084] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:49:40.988 MST [13084] DETAIL:  Key (id)=(212600) already exists.
+2022-10-28 11:49:40.988 MST [13084] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(212600, ARRAY[10,32], NULL, NULL, NULL, NULL, NULL, 'Bomb Viking', NULL)
+2022-10-28 11:49:41.007 MST [13084] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:51:33.475 MST [25996] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:51:33.475 MST [25996] DETAIL:  Key (id)=(212600) already exists.
+2022-10-28 11:51:33.475 MST [25996] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(212600, ARRAY[10,32], NULL, NULL, NULL, NULL, NULL, 'Bomb Viking', NULL)
+2022-10-28 11:51:33.495 MST [25996] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:52:52.666 MST [23576] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:52:52.666 MST [23576] DETAIL:  Key (id)=(212600) already exists.
+2022-10-28 11:52:52.666 MST [23576] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(212600, ARRAY[10,32], NULL, NULL, NULL, NULL, NULL, 'Bomb Viking', NULL)
+2022-10-28 11:52:52.667 MST [23576] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:52:52.667 MST [23576] DETAIL:  Key (id)=(212599) already exists.
+2022-10-28 11:52:52.667 MST [23576] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(212599, ARRAY[31,32], NULL, NULL, NULL, NULL, NULL, 'Broken Dimensions', NULL)
+2022-10-28 11:52:52.682 MST [23576] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:53:49.561 MST [3984] LOG:  checkpoint starting: time
+2022-10-28 11:54:06.100 MST [26532] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:54:06.100 MST [26532] DETAIL:  Key (id)=(212600) already exists.
+2022-10-28 11:54:06.100 MST [26532] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(212600, ARRAY[10,32], NULL, NULL, NULL, NULL, NULL, 'Bomb Viking', NULL)
+2022-10-28 11:54:06.101 MST [26532] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:54:06.101 MST [26532] DETAIL:  Key (id)=(212599) already exists.
+2022-10-28 11:54:06.101 MST [26532] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(212599, ARRAY[31,32], NULL, NULL, NULL, NULL, NULL, 'Broken Dimensions', NULL)
+2022-10-28 11:54:06.114 MST [26532] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:54:07.719 MST [3984] LOG:  checkpoint complete: wrote 147 buffers (0.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=16.953 s, sync=1.089 s, total=18.158 s; sync files=59, longest=0.054 s, average=0.019 s; distance=1638 kB, estimate=5347 kB
+2022-10-28 11:54:49.879 MST [24928] ERROR:  duplicate key value violates unique constraint "games_pkey"
+2022-10-28 11:54:49.879 MST [24928] DETAIL:  Key (id)=(222982) already exists.
+2022-10-28 11:54:49.879 MST [24928] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222982, NULL, NULL, NULL, NULL, NULL, NULL, 'Kaoamaru Kaiju', NULL)
+2022-10-28 11:54:49.897 MST [24928] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:56:18.346 MST [16704] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 11:58:49.723 MST [3984] LOG:  checkpoint starting: time
+2022-10-28 11:59:17.575 MST [3984] LOG:  checkpoint complete: wrote 253 buffers (1.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=26.943 s, sync=0.790 s, total=27.853 s; sync files=82, longest=0.040 s, average=0.010 s; distance=2701 kB, estimate=5083 kB
+2022-10-28 12:00:15.964 MST [9224] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-28 12:03:49.589 MST [3984] LOG:  checkpoint starting: time
+2022-10-28 12:04:11.991 MST [3984] LOG:  checkpoint complete: wrote 205 buffers (1.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=21.629 s, sync=0.665 s, total=22.403 s; sync files=78, longest=0.025 s, average=0.009 s; distance=1650 kB, estimate=4739 kB
+2022-10-28 12:05:50.265 MST [25128] ERROR:  syntax error at or near "." at character 26
+2022-10-28 12:05:50.265 MST [25128] STATEMENT:  SELECT games.name company.name FROM "games", "company", "involvedwith" WHERE games.id=involvedwith.gameid AND company.id=involvedwith.companyid;
+2022-10-28 12:08:49.992 MST [3984] LOG:  checkpoint starting: time
+2022-10-28 12:08:50.377 MST [3984] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.220 s, sync=0.053 s, total=0.385 s; sync files=1, longest=0.053 s, average=0.053 s; distance=5 kB, estimate=4266 kB
+2022-10-29 16:00:04.484 MST [25128] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	

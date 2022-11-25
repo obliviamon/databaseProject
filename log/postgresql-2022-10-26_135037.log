@@ -1,0 +1,609 @@
+2022-10-26 13:50:40.877 MST [8724] LOG:  database system was interrupted; last known up at 2022-10-26 11:13:56 MST
+2022-10-26 13:50:50.883 MST [8724] LOG:  syncing data directory (fsync), elapsed time: 10.00 s, current path: ./base/1/2835
+2022-10-26 13:51:00.898 MST [8724] LOG:  syncing data directory (fsync), elapsed time: 20.02 s, current path: ./base/4/3466
+2022-10-26 13:51:05.635 MST [8724] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-10-26 13:51:05.995 MST [8724] LOG:  redo starts at 0/15608F8
+2022-10-26 13:51:05.996 MST [8724] LOG:  invalid record length at 0/1560930: wanted 24, got 0
+2022-10-26 13:51:05.996 MST [8724] LOG:  redo done at 0/15608F8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.05 s
+2022-10-26 13:51:06.183 MST [3984] LOG:  checkpoint starting: end-of-recovery immediate wait
+2022-10-26 13:51:07.035 MST [3984] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.210 s, total=0.950 s; sync files=2, longest=0.177 s, average=0.105 s; distance=0 kB, estimate=0 kB
+2022-10-26 15:26:02.057 MST [15952] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:26:57.671 MST [17332] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:27:42.474 MST [4940] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:28:40.620 MST [16592] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:30:05.828 MST [17308] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:31:53.195 MST [4136] ERROR:  SELECT * with no tables specified is not valid at character 8
+2022-10-26 15:31:53.195 MST [4136] STATEMENT:  SELECT *
+2022-10-26 15:31:53.209 MST [4136] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:39:12.702 MST [19216] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:39:25.423 MST [9220] ERROR:  relation "games" already exists
+2022-10-26 15:39:25.423 MST [9220] STATEMENT:  CREATE TABLE Games (id int, genres int[], game_engines int[], franchise int[], age_rating int[], platforms int[], release_dates int[], name varchar(255), involved_companies int[])
+2022-10-26 15:39:25.435 MST [9220] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:41:06.235 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 15:41:09.789 MST [3984] LOG:  checkpoint complete: wrote 30 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.911 s, sync=0.510 s, total=3.555 s; sync files=22, longest=0.046 s, average=0.024 s; distance=117 kB, estimate=117 kB
+2022-10-26 15:45:03.404 MST [18888] ERROR:  relation "games" already exists
+2022-10-26 15:45:03.404 MST [18888] STATEMENT:  CREATE TABLE Games (id int, genres int[], game_engines int[], franchise int[], age_rating int[], platforms int[], release_dates int[], name varchar(255), involved_companies int[])
+2022-10-26 15:45:03.425 MST [18888] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:45:20.511 MST [14640] ERROR:  relation "games" already exists
+2022-10-26 15:45:20.511 MST [14640] STATEMENT:  CREATE TABLE Games (id int, genres int[], game_engines int[], franchise int[], age_rating int[], platforms int[], release_dates int[], name varchar(255), involved_companies int[])
+2022-10-26 15:45:20.531 MST [14640] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:45:54.070 MST [8424] ERROR:  unterminated quoted identifier at or near "")" at character 116
+2022-10-26 15:45:54.070 MST [8424] STATEMENT:  INSERT INTO Games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined, ")
+2022-10-26 15:45:54.076 MST [8424] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 15:45:54.076 MST [8424] STATEMENT:  INSERT INTO Games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined, ")
+2022-10-26 15:45:54.089 MST [8424] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:46:45.341 MST [6728] ERROR:  syntax error at or near ")" at character 116
+2022-10-26 15:46:45.341 MST [6728] STATEMENT:  INSERT INTO Games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined, )
+2022-10-26 15:46:45.347 MST [6728] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 15:46:45.347 MST [6728] STATEMENT:  INSERT INTO Games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined, )
+2022-10-26 15:46:45.363 MST [6728] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:47:06.550 MST [4888] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 15:47:06.550 MST [4888] STATEMENT:  INSERT INTO Games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined)
+2022-10-26 15:47:06.555 MST [4888] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 15:47:06.555 MST [4888] STATEMENT:  INSERT INTO Games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 15:47:06.572 MST [4888] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:47:53.831 MST [7000] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 15:47:53.831 MST [7000] STATEMENT:  INSERT INTO Games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined)
+2022-10-26 15:47:53.837 MST [7000] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 15:47:53.837 MST [7000] STATEMENT:  INSERT INTO Games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 15:47:53.852 MST [7000] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:48:15.894 MST [19168] ERROR:  relation "games" already exists
+2022-10-26 15:48:15.894 MST [19168] STATEMENT:  CREATE TABLE Games (id int, genres int[], game_engines int[], franchise int[], age_rating int[], platforms int[], release_dates int[], name varchar(255), involved_companies int[])
+2022-10-26 15:48:15.907 MST [19168] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:51:31.025 MST [16632] ERROR:  syntax error at or near "TABLE" at character 13
+2022-10-26 15:51:31.025 MST [16632] STATEMENT:  TABLE games
+	TABLE games;
+2022-10-26 15:52:00.973 MST [16632] ERROR:  syntax error at or near "SELECT" at character 21
+2022-10-26 15:52:00.973 MST [16632] STATEMENT:  SELECT * FROM games
+	SELECT * FROM games;
+2022-10-26 15:52:28.078 MST [16632] ERROR:  syntax error at or near "Table" at character 13
+2022-10-26 15:52:28.078 MST [16632] STATEMENT:  Table games
+	Table games;
+2022-10-26 15:52:44.653 MST [16632] ERROR:  syntax error at or near "Table" at character 15
+2022-10-26 15:52:44.653 MST [16632] STATEMENT:  Table "games"
+	Table "games";
+2022-10-26 15:58:00.260 MST [16632] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:58:43.076 MST [4728] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 15:58:43.076 MST [4728] STATEMENT:  INSERT INTO games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined)
+2022-10-26 15:58:43.082 MST [4728] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 15:58:43.082 MST [4728] STATEMENT:  INSERT INTO games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 15:58:43.094 MST [4728] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 15:59:52.658 MST [13040] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 15:59:52.658 MST [13040] STATEMENT:  INSERT INTO Games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined)
+2022-10-26 15:59:52.665 MST [13040] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 15:59:52.665 MST [13040] STATEMENT:  INSERT INTO Games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 15:59:52.682 MST [13040] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:00:00.709 MST [9776] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 16:00:00.709 MST [9776] STATEMENT:  INSERT INTO games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined)
+2022-10-26 16:00:00.716 MST [9776] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 16:00:00.716 MST [9776] STATEMENT:  INSERT INTO games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:00:00.744 MST [9776] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:00:58.306 MST [8848] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:01:29.465 MST [19124] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:01:53.188 MST [15948] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:02:01.988 MST [13300] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:02:15.974 MST [9764] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:02:22.910 MST [16364] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:02:32.562 MST [6076] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:02:38.450 MST [17104] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:02:53.996 MST [12120] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:03:49.238 MST [2984] ERROR:  syntax error at or near "list" at character 1
+2022-10-26 16:03:49.238 MST [2984] STATEMENT:  list
+	list;
+2022-10-26 16:04:59.554 MST [13516] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 16:04:59.554 MST [13516] STATEMENT:  INSERT INTO Games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined)
+2022-10-26 16:04:59.560 MST [13516] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 16:04:59.560 MST [13516] STATEMENT:  INSERT INTO Games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:04:59.572 MST [13516] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:06:02.326 MST [19420] ERROR:  relation "games" already exists
+2022-10-26 16:06:02.326 MST [19420] STATEMENT:  CREATE TABLE Games (id int, genres int[] NULL, game_engines int[] NULL, franchise int[] NULL, age_rating int[] NULL, platforms int[] NULL, release_dates int[] NULL, name varchar(255), involved_companies int[] NULL)
+2022-10-26 16:06:02.341 MST [19420] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:06:06.791 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 16:06:09.897 MST [3984] LOG:  checkpoint complete: wrote 27 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.628 s, sync=0.351 s, total=3.107 s; sync files=19, longest=0.052 s, average=0.019 s; distance=140 kB, estimate=140 kB
+2022-10-26 16:06:28.752 MST [5292] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 16:06:28.752 MST [5292] STATEMENT:  INSERT INTO games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined)
+2022-10-26 16:06:28.776 MST [5292] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 16:06:28.776 MST [5292] STATEMENT:  INSERT INTO games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:06:28.789 MST [5292] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:07:38.688 MST [19880] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 16:07:38.688 MST [19880] STATEMENT:  INSERT INTO games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined)
+2022-10-26 16:07:38.693 MST [19880] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 16:07:38.693 MST [19880] STATEMENT:  INSERT INTO games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:07:38.715 MST [19880] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:07:52.593 MST [3164] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:08:07.162 MST [20000] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 16:08:07.162 MST [20000] STATEMENT:  INSERT INTO games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined)
+2022-10-26 16:08:07.168 MST [20000] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 16:08:07.168 MST [20000] STATEMENT:  INSERT INTO games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:08:07.184 MST [20000] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:09:25.543 MST [20332] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 16:09:25.543 MST [20332] STATEMENT:  INSERT INTO games VALUES(222836, undefined, undefined, undefined, undefined, undefinedundefined, JBMod, undefined)
+2022-10-26 16:09:25.549 MST [20332] ERROR:  syntax error at or near "Angler" at character 92
+2022-10-26 16:09:25.549 MST [20332] STATEMENT:  INSERT INTO games VALUES(222795, 13, undefined, undefined, 100484, undefinedundefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:09:25.563 MST [20332] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:09:50.393 MST [19080] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 16:09:50.393 MST [19080] STATEMENT:  INSERT INTO games VALUES(222836, undefined, undefined, undefined, undefined, undefined, undefined, JBMod, undefined)
+2022-10-26 16:09:50.399 MST [19080] ERROR:  syntax error at or near "Angler" at character 94
+2022-10-26 16:09:50.399 MST [19080] STATEMENT:  INSERT INTO games VALUES(222795, 13, undefined, undefined, 100484, undefined, undefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:09:50.412 MST [19080] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:10:00.819 MST [20044] ERROR:  column "undefined" does not exist at character 34
+2022-10-26 16:10:00.819 MST [20044] STATEMENT:  INSERT INTO games VALUES(222836, undefined, undefined, undefined, undefined, undefined, undefined, JBMod, undefined)
+2022-10-26 16:10:00.824 MST [20044] ERROR:  syntax error at or near "Angler" at character 94
+2022-10-26 16:10:00.824 MST [20044] STATEMENT:  INSERT INTO games VALUES(222795, 13, undefined, undefined, 100484, undefined, undefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:10:00.843 MST [20044] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:18:02.752 MST [17440] ERROR:  column "age_ratings" of relation "games" does not exist at character 57
+2022-10-26 16:18:02.752 MST [17440] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222836, undefined, undefined, undefined, undefined, undefined, undefined, JBMod, undefined)
+2022-10-26 16:18:02.759 MST [17440] ERROR:  syntax error at or near "Angler" at character 197
+2022-10-26 16:18:02.759 MST [17440] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222795, 13, undefined, undefined, 100484, undefined, undefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:18:02.811 MST [17440] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:18:57.861 MST [19924] ERROR:  column "undefined" does not exist at character 137
+2022-10-26 16:18:57.861 MST [19924] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222836, undefined, undefined, undefined, undefined, undefined, undefined, JBMod, undefined)
+2022-10-26 16:18:57.867 MST [19924] ERROR:  syntax error at or near "Angler" at character 197
+2022-10-26 16:18:57.867 MST [19924] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222795, 13, undefined, undefined, 100484, undefined, undefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:18:57.885 MST [19924] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:19:14.211 MST [19848] ERROR:  column "undefined" does not exist at character 137
+2022-10-26 16:19:14.211 MST [19848] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222836, undefined, undefined, undefined, undefined, undefined, undefined, JBMod, undefined)
+2022-10-26 16:19:14.217 MST [19848] ERROR:  syntax error at or near "Angler" at character 197
+2022-10-26 16:19:14.217 MST [19848] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222795, 13, undefined, undefined, 100484, undefined, undefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 16:19:14.234 MST [19848] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:20:51.797 MST [10716] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:21:06.899 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 16:21:10.081 MST [3984] LOG:  checkpoint complete: wrote 28 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.714 s, sync=0.333 s, total=3.183 s; sync files=21, longest=0.029 s, average=0.016 s; distance=192 kB, estimate=192 kB
+2022-10-26 16:22:21.576 MST [16604] ERROR:  column "undefined" does not exist at character 35
+2022-10-26 16:22:21.576 MST [16604] STATEMENT:  INSERT INTO games (genres) VALUES(undefined)
+2022-10-26 16:22:21.581 MST [16604] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:22:21.581 MST [16604] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:22:21.581 MST [16604] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:22:21.595 MST [16604] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:23:58.657 MST [14988] ERROR:  column "undefined" does not exist at character 35
+2022-10-26 16:23:58.657 MST [14988] STATEMENT:  INSERT INTO games (genres) VALUES(undefined)
+2022-10-26 16:23:58.661 MST [14988] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:23:58.661 MST [14988] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:23:58.661 MST [14988] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:23:58.675 MST [14988] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:24:23.826 MST [17404] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:26:06.083 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 16:26:07.430 MST [3984] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.013 s, sync=0.201 s, total=1.348 s; sync files=6, longest=0.060 s, average=0.034 s; distance=22 kB, estimate=175 kB
+2022-10-26 16:27:20.931 MST [20384] ERROR:  syntax error at or near "undefined" at character 41
+2022-10-26 16:27:20.931 MST [20384] STATEMENT:  INSERT INTO games (genres) VALUES(array(undefined))
+2022-10-26 16:27:20.936 MST [20384] ERROR:  syntax error at or near "13" at character 41
+2022-10-26 16:27:20.936 MST [20384] STATEMENT:  INSERT INTO games (genres) VALUES(array(13))
+2022-10-26 16:27:20.953 MST [20384] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:27:53.871 MST [19492] ERROR:  column "undefined" does not exist at character 35
+2022-10-26 16:27:53.871 MST [19492] STATEMENT:  INSERT INTO games (genres) VALUES(undefined)
+2022-10-26 16:27:54.317 MST [19492] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:27:54.317 MST [19492] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:27:54.317 MST [19492] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:27:54.333 MST [19492] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:31:35.640 MST [10680] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:31:35.640 MST [10680] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:31:35.640 MST [10680] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:31:35.643 MST [10680] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:31:35.643 MST [10680] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:31:35.658 MST [10680] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:32:52.756 MST [9016] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:32:52.756 MST [9016] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:32:52.756 MST [9016] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:32:52.760 MST [9016] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:32:52.760 MST [9016] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:32:52.772 MST [9016] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:33:29.406 MST [900] ERROR:  INSERT has more expressions than target columns at character 37
+2022-10-26 16:33:29.406 MST [900] STATEMENT:  INSERT INTO games (genres) VALUES(1,3)
+2022-10-26 16:33:29.410 MST [900] ERROR:  syntax error at or near "," at character 39
+2022-10-26 16:33:29.410 MST [900] STATEMENT:  INSERT INTO games (genres) VALUES(1,0,,,1,4,,,3,3)
+2022-10-26 16:33:29.425 MST [900] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:34:07.730 MST [19888] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:34:07.730 MST [19888] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:34:07.730 MST [19888] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:34:07.734 MST [19888] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:34:07.734 MST [19888] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:34:07.751 MST [19888] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:36:06.765 MST [20036] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:36:06.765 MST [20036] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:36:06.765 MST [20036] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:36:06.769 MST [20036] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:36:06.769 MST [20036] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:36:06.783 MST [20036] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:38:01.820 MST [13436] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:38:01.820 MST [13436] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:38:01.820 MST [13436] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:38:01.822 MST [13436] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:38:01.822 MST [13436] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:38:01.835 MST [13436] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:39:29.270 MST [6192] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:39:29.270 MST [6192] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:39:29.270 MST [6192] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:39:29.272 MST [6192] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:39:29.272 MST [6192] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:39:29.290 MST [6192] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:40:22.415 MST [5516] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:40:22.415 MST [5516] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:40:22.415 MST [5516] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:40:22.416 MST [5516] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:40:22.416 MST [5516] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:40:22.434 MST [5516] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:40:41.155 MST [19700] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:41:01.387 MST [17620] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:41:06.431 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 16:41:07.120 MST [3984] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.502 s, sync=0.062 s, total=0.689 s; sync files=2, longest=0.050 s, average=0.031 s; distance=98 kB, estimate=167 kB
+2022-10-26 16:41:25.099 MST [18540] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:41:36.230 MST [16536] ERROR:  syntax error at or near "[" at character 35
+2022-10-26 16:41:36.230 MST [16536] STATEMENT:  INSERT INTO games (genres) VALUES([13])
+2022-10-26 16:41:36.232 MST [16536] ERROR:  syntax error at or near "[" at character 35
+2022-10-26 16:41:36.232 MST [16536] STATEMENT:  INSERT INTO games (genres) VALUES([10,14,33])
+2022-10-26 16:41:36.249 MST [16536] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:41:45.381 MST [19984] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:41:45.381 MST [19984] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:41:45.381 MST [19984] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:41:45.383 MST [19984] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:41:45.383 MST [19984] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:41:45.405 MST [19984] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:41:59.775 MST [20216] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:44:41.019 MST [19884] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:44:41.019 MST [19884] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:44:41.019 MST [19884] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:44:41.021 MST [19884] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:44:41.021 MST [19884] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:44:41.033 MST [19884] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:44:52.977 MST [16536] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:45:07.655 MST [10124] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:45:07.655 MST [10124] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:45:07.655 MST [10124] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:45:07.657 MST [10124] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:45:07.657 MST [10124] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:45:07.674 MST [10124] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:45:23.707 MST [18780] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:46:06.120 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 16:46:08.296 MST [3984] LOG:  checkpoint complete: wrote 20 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.908 s, sync=0.154 s, total=2.177 s; sync files=6, longest=0.069 s, average=0.026 s; distance=170 kB, estimate=170 kB
+2022-10-26 16:47:24.589 MST [12240] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:47:24.589 MST [12240] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:47:24.589 MST [12240] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:47:24.591 MST [12240] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:47:24.591 MST [12240] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:47:24.618 MST [12240] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:48:38.009 MST [19496] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:49:51.905 MST [10024] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:49:51.905 MST [10024] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:49:51.905 MST [10024] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:49:51.907 MST [10024] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:49:51.907 MST [10024] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:49:51.924 MST [10024] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:50:29.629 MST [18892] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:50:29.629 MST [18892] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:50:29.629 MST [18892] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:50:29.630 MST [18892] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:50:29.630 MST [18892] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:50:29.654 MST [18892] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:51:06.304 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 16:51:08.024 MST [3984] LOG:  checkpoint complete: wrote 16 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.512 s, sync=0.095 s, total=1.721 s; sync files=6, longest=0.029 s, average=0.016 s; distance=78 kB, estimate=161 kB
+2022-10-26 16:51:20.330 MST [19636] ERROR:  column "genres" is of type integer[] but expression is of type integer at character 35
+2022-10-26 16:51:20.330 MST [19636] HINT:  You will need to rewrite or cast the expression.
+2022-10-26 16:51:20.330 MST [19636] STATEMENT:  INSERT INTO games (genres) VALUES(13)
+2022-10-26 16:51:20.333 MST [19636] ERROR:  INSERT has more expressions than target columns at character 38
+2022-10-26 16:51:20.333 MST [19636] STATEMENT:  INSERT INTO games (genres) VALUES(10,14,33)
+2022-10-26 16:51:20.352 MST [19636] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:51:32.342 MST [17440] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:51:48.145 MST [17004] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:52:11.093 MST [7032] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:52:15.432 MST [1048] ERROR:  syntax error at or near "[" at character 35
+2022-10-26 16:52:15.432 MST [1048] STATEMENT:  INSERT INTO games (genres) VALUES([13])
+2022-10-26 16:52:15.459 MST [1048] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:55:12.823 MST [19332] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:56:06.025 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 16:56:07.738 MST [3984] LOG:  checkpoint complete: wrote 17 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.509 s, sync=0.098 s, total=1.714 s; sync files=5, longest=0.045 s, average=0.020 s; distance=213 kB, estimate=213 kB
+2022-10-26 16:56:38.060 MST [2984] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 16:59:33.068 MST [16580] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:01:01.101 MST [10888] ERROR:  column "array13" does not exist at character 35
+2022-10-26 17:01:01.101 MST [10888] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY13)
+2022-10-26 17:01:01.102 MST [10888] ERROR:  column "array10" does not exist at character 35
+2022-10-26 17:01:01.102 MST [10888] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY10,14,33)
+2022-10-26 17:01:01.119 MST [10888] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:01:06.739 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 17:01:09.558 MST [3984] LOG:  checkpoint complete: wrote 27 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.519 s, sync=0.186 s, total=2.820 s; sync files=9, longest=0.054 s, average=0.021 s; distance=122 kB, estimate=204 kB
+2022-10-26 17:01:11.816 MST [16348] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:01:33.278 MST [3748] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:01:44.504 MST [15904] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:03:12.522 MST [17060] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:04:12.986 MST [10820] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:04:26.419 MST [19364] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:05:54.902 MST [17152] ERROR:  column "word" does not exist at character 33
+2022-10-26 17:05:54.902 MST [17152] STATEMENT:  INSERT INTO games (name) VALUES("word")
+2022-10-26 17:05:54.904 MST [17152] ERROR:  column "word" does not exist at character 33
+2022-10-26 17:05:54.904 MST [17152] STATEMENT:  INSERT INTO games (name) VALUES("word")
+2022-10-26 17:05:54.916 MST [17152] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:06:06.559 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 17:06:09.657 MST [3984] LOG:  checkpoint complete: wrote 29 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.741 s, sync=0.232 s, total=3.099 s; sync files=8, longest=0.045 s, average=0.029 s; distance=314 kB, estimate=314 kB
+2022-10-26 17:06:12.546 MST [2992] ERROR:  column "word" does not exist at character 33
+2022-10-26 17:06:12.546 MST [2992] STATEMENT:  INSERT INTO games (name) VALUES(word)
+2022-10-26 17:06:12.562 MST [2992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:06:23.736 MST [16476] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:07:43.877 MST [19384] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:07:43.877 MST [19384] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:07:44.061 MST [19384] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:07:44.061 MST [19384] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:07:44.133 MST [19384] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:08:47.558 MST [6212] ERROR:  cannot determine type of empty array at character 35
+2022-10-26 17:08:47.558 MST [6212] HINT:  Explicitly cast to the desired type, for example ARRAY[]::integer[].
+2022-10-26 17:08:47.558 MST [6212] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[])
+2022-10-26 17:08:47.821 MST [6212] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:08:47.821 MST [6212] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:08:47.837 MST [6212] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:09:04.199 MST [15408] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:09:04.199 MST [15408] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:09:04.222 MST [15408] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:09:49.769 MST [3624] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:09:49.769 MST [3624] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:09:49.786 MST [3624] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:10:17.236 MST [16472] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:10:17.236 MST [16472] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:10:17.254 MST [16472] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:11:06.658 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 17:11:07.391 MST [3984] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.605 s, sync=0.039 s, total=0.734 s; sync files=3, longest=0.022 s, average=0.013 s; distance=56 kB, estimate=288 kB
+2022-10-26 17:11:17.067 MST [17648] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:11:17.067 MST [17648] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:11:17.308 MST [17648] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:11:39.727 MST [16612] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:11:39.727 MST [16612] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:11:39.758 MST [16612] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:11:53.145 MST [3452] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:12:19.681 MST [20108] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:12:19.681 MST [20108] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:12:19.715 MST [20108] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:13:31.902 MST [14400] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:13:31.902 MST [14400] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:13:32.276 MST [14400] ERROR:  column "undefined" does not exist at character 41
+2022-10-26 17:13:32.276 MST [14400] STATEMENT:  INSERT INTO games (genres) VALUES(ARRAY[undefined])
+2022-10-26 17:13:32.292 MST [14400] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:14:15.298 MST [12980] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:14:33.189 MST [14612] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:16:06.392 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 17:16:09.678 MST [3984] LOG:  checkpoint complete: wrote 30 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.818 s, sync=0.371 s, total=3.287 s; sync files=21, longest=0.030 s, average=0.018 s; distance=260 kB, estimate=286 kB
+2022-10-26 17:16:21.958 MST [19448] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:16:32.167 MST [2084] ERROR:  relation "games" already exists
+2022-10-26 17:16:32.167 MST [2084] STATEMENT:  CREATE TABLE games (id int, genres int[] NULL, game_engines int[] NULL, franchise int[] NULL, age_ratings int[] NULL, platforms int[] NULL, release_dates int[] NULL, name varchar(255), involved_companies int[] NULL)
+2022-10-26 17:16:32.184 MST [2084] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:17:34.110 MST [19968] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:18:22.927 MST [9332] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:21:06.680 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 17:21:07.969 MST [3984] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.011 s, sync=0.159 s, total=1.290 s; sync files=8, longest=0.030 s, average=0.020 s; distance=71 kB, estimate=264 kB
+2022-10-26 17:23:29.475 MST [18736] ERROR:  column "genresstring" of relation "games" does not exist at character 24
+2022-10-26 17:23:29.475 MST [18736] STATEMENT:  INSERT INTO games (id, genresString, game_enginesString, franchiseString, age_ratingsString, platformsString, release_datesString, name, involved_companiesString) VALUES(222836, undefined, undefined, undefined, undefined, undefined, undefined, JBMod, undefined)
+2022-10-26 17:23:29.481 MST [18736] ERROR:  syntax error at or near "Angler" at character 239
+2022-10-26 17:23:29.481 MST [18736] STATEMENT:  INSERT INTO games (id, genresString, game_enginesString, franchiseString, age_ratingsString, platformsString, release_datesString, name, involved_companiesString) VALUES(222795, 13, undefined, undefined, 100484, undefined, undefined, Ace Angler: Fishing Spirits, undefined)
+2022-10-26 17:23:29.497 MST [18736] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:24:25.139 MST [19116] ERROR:  column "jbmod" does not exist at character 173
+2022-10-26 17:24:25.139 MST [19116] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222836, NULL, NULL, NULL, NULL, NULL, NULL, JBMod, NULL)
+2022-10-26 17:24:25.145 MST [19116] ERROR:  syntax error at or near "Angler" at character 187
+2022-10-26 17:24:25.145 MST [19116] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222795, ARRAY[13], NULL, NULL, ARRAY[13], NULL, NULL, Ace Angler: Fishing Spirits, NULL)
+2022-10-26 17:24:25.165 MST [19116] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:25:33.616 MST [19708] ERROR:  column "jbmod" does not exist at character 173
+2022-10-26 17:25:33.616 MST [19708] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222836, NULL, NULL, NULL, NULL, NULL, NULL, JBMod, NULL)
+2022-10-26 17:25:33.622 MST [19708] ERROR:  syntax error at or near "Angler" at character 191
+2022-10-26 17:25:33.622 MST [19708] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222795, ARRAY[13], NULL, NULL, ARRAY[100484], NULL, NULL, Ace Angler: Fishing Spirits, NULL)
+2022-10-26 17:25:33.725 MST [19708] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:27:26.279 MST [14420] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:28:03.762 MST [20056] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:29:34.619 MST [9004] ERROR:  relation "games" already exists
+2022-10-26 17:29:34.619 MST [9004] STATEMENT:  CREATE TABLE games (id int, genres int[] NULL, game_engines int[] NULL, franchise int[] NULL, age_ratings int[] NULL, platforms int[] NULL, release_dates int[] NULL, name varchar(255), involved_companies int[] NULL)
+2022-10-26 17:29:34.657 MST [9004] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:29:44.551 MST [16052] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:30:37.665 MST [20356] ERROR:  syntax error at or near "s" at character 201
+2022-10-26 17:30:37.665 MST [20356] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222558, NULL, NULL, NULL, NULL, NULL, NULL, 'Resident Evil 4: Collector's Edition', NULL)
+2022-10-26 17:30:37.681 MST [20356] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:31:06.971 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 17:31:07.466 MST [3984] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.303 s, sync=0.078 s, total=0.495 s; sync files=3, longest=0.034 s, average=0.026 s; distance=11 kB, estimate=239 kB
+2022-10-26 17:31:16.327 MST [18576] ERROR:  syntax error at or near "s" at character 201
+2022-10-26 17:31:16.327 MST [18576] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222558, NULL, NULL, NULL, NULL, NULL, NULL, 'Resident Evil 4: Collector's Edition', NULL)
+2022-10-26 17:31:16.345 MST [18576] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:31:42.632 MST [14400] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:32:26.756 MST [13112] ERROR:  syntax error at or near "s" at character 201
+2022-10-26 17:32:26.756 MST [13112] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222558, NULL, NULL, NULL, NULL, NULL, NULL, 'Resident Evil 4: Collector's Edition', NULL)
+2022-10-26 17:32:26.769 MST [13112] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:33:10.450 MST [17620] ERROR:  column "jbmod" does not exist at character 173
+2022-10-26 17:33:10.450 MST [17620] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222836, NULL, NULL, NULL, NULL, NULL, NULL, JBMod, NULL)
+2022-10-26 17:33:10.456 MST [17620] ERROR:  syntax error at or near "Angler" at character 191
+2022-10-26 17:33:10.456 MST [17620] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222795, ARRAY[13], NULL, NULL, ARRAY[100484], NULL, NULL, Ace Angler: Fishing Spirits, NULL)
+2022-10-26 17:33:10.471 MST [17620] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:34:03.961 MST [19308] ERROR:  syntax error at or near "s" at character 201
+2022-10-26 17:34:03.961 MST [19308] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222558, NULL, NULL, NULL, NULL, NULL, NULL, 'Resident Evil 4: Collector's Edition', NULL)
+2022-10-26 17:34:03.993 MST [19308] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:34:25.959 MST [3752] ERROR:  syntax error at or near "s" at character 201
+2022-10-26 17:34:25.959 MST [3752] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222558, NULL, NULL, NULL, NULL, NULL, NULL, 'Resident Evil 4: Collector's Edition', NULL)
+2022-10-26 17:34:25.975 MST [3752] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:34:45.980 MST [12444] ERROR:  syntax error at or near "s" at character 201
+2022-10-26 17:34:45.980 MST [12444] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222558, NULL, NULL, NULL, NULL, NULL, NULL, 'Resident Evil 4: Collector's Edition', NULL)
+2022-10-26 17:34:45.999 MST [12444] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:36:06.466 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 17:36:07.878 MST [3984] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.118 s, sync=0.181 s, total=1.412 s; sync files=7, longest=0.034 s, average=0.026 s; distance=43 kB, estimate=219 kB
+2022-10-26 17:36:20.690 MST [6212] ERROR:  column "jbmod" does not exist at character 173
+2022-10-26 17:36:20.690 MST [6212] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222836, NULL, NULL, NULL, NULL, NULL, NULL, JBMod, NULL)
+2022-10-26 17:36:21.074 MST [6212] ERROR:  syntax error at or near "Angler" at character 191
+2022-10-26 17:36:21.074 MST [6212] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222795, ARRAY[13], NULL, NULL, ARRAY[100484], NULL, NULL, Ace Angler: Fishing Spirits, NULL)
+2022-10-26 17:36:21.102 MST [6212] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:39:28.776 MST [19544] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:39:34.528 MST [8568] ERROR:  syntax error at or near "SELECT" at character 18
+2022-10-26 17:39:34.528 MST [8568] STATEMENT:  DROP TABLE games
+	SELECT * from games;
+2022-10-26 17:41:06.878 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 17:41:08.607 MST [3984] LOG:  checkpoint complete: wrote 15 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.430 s, sync=0.173 s, total=1.730 s; sync files=13, longest=0.035 s, average=0.014 s; distance=129 kB, estimate=210 kB
+2022-10-26 17:42:28.255 MST [19116] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:42:47.609 MST [1564] ERROR:  column "jbmod" does not exist at character 173
+2022-10-26 17:42:47.609 MST [1564] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222836, NULL, NULL, NULL, NULL, NULL, NULL, JBMod, NULL)
+2022-10-26 17:42:47.917 MST [1564] ERROR:  syntax error at or near "Angler" at character 191
+2022-10-26 17:42:47.917 MST [1564] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222795, ARRAY[13], NULL, NULL, ARRAY[100484], NULL, NULL, Ace Angler: Fishing Spirits, NULL)
+2022-10-26 17:42:47.951 MST [1564] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:44:02.696 MST [5788] ERROR:  syntax error at or near "s" at character 201
+2022-10-26 17:44:02.696 MST [5788] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222558, NULL, NULL, NULL, NULL, NULL, NULL, 'Resident Evil 4: Collector's Edition', NULL)
+2022-10-26 17:44:02.709 MST [5788] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:46:06.608 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 17:46:09.426 MST [3984] LOG:  checkpoint complete: wrote 24 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.315 s, sync=0.393 s, total=2.819 s; sync files=19, longest=0.030 s, average=0.021 s; distance=118 kB, estimate=201 kB
+2022-10-26 17:46:11.779 MST [4972] ERROR:  syntax error at or near "s" at character 201
+2022-10-26 17:46:11.779 MST [4972] STATEMENT:  INSERT INTO games (id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies) VALUES(222558, NULL, NULL, NULL, NULL, NULL, NULL, 'Resident Evil 4: Collector's Edition', NULL)
+2022-10-26 17:46:11.792 MST [4972] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:47:32.419 MST [21020] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:47:36.305 MST [8568] ERROR:  character with byte sequence 0xe3 0x83 0x89 in encoding "UTF8" has no equivalent in encoding "WIN1252"
+2022-10-26 17:47:36.305 MST [8568] STATEMENT:  SELECT * from "games";
+2022-10-26 17:47:40.873 MST [8568] ERROR:  character with byte sequence 0xe3 0x83 0x89 in encoding "UTF8" has no equivalent in encoding "WIN1252"
+2022-10-26 17:47:40.873 MST [8568] STATEMENT:  SELECT * from "games";
+2022-10-26 17:48:14.176 MST [8568] ERROR:  character with byte sequence 0xe3 0x83 0x89 in encoding "UTF8" has no equivalent in encoding "WIN1252"
+2022-10-26 17:48:14.176 MST [8568] STATEMENT:  SELECT * from "games";
+2022-10-26 17:48:18.184 MST [8568] ERROR:  relation "games" does not exist at character 15
+2022-10-26 17:48:18.184 MST [8568] STATEMENT:  SELECT * from "games";
+2022-10-26 17:48:28.808 MST [8568] ERROR:  relation "games" does not exist at character 15
+2022-10-26 17:48:28.808 MST [8568] STATEMENT:  SELECT * from "games";
+2022-10-26 17:48:33.161 MST [20868] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:48:53.394 MST [20672] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:48:56.785 MST [8568] ERROR:  character with byte sequence 0xe3 0x83 0x89 in encoding "UTF8" has no equivalent in encoding "WIN1252"
+2022-10-26 17:48:56.785 MST [8568] STATEMENT:  SELECT * from "games";
+2022-10-26 17:49:18.427 MST [8568] ERROR:  character with byte sequence 0xe3 0x83 0x89 in encoding "UTF8" has no equivalent in encoding "WIN1252"
+2022-10-26 17:49:18.427 MST [8568] STATEMENT:  SELECT name from "games";
+2022-10-26 17:51:06.427 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 17:51:11.315 MST [3984] LOG:  checkpoint complete: wrote 46 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.435 s, sync=0.322 s, total=4.889 s; sync files=28, longest=0.037 s, average=0.012 s; distance=347 kB, estimate=347 kB
+2022-10-26 17:53:49.064 MST [8568] ERROR:  operator does not exist: character varying == unknown at character 36
+2022-10-26 17:53:49.064 MST [8568] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2022-10-26 17:53:49.064 MST [8568] STATEMENT:  SELECT name from "games" WHERE name=='jbmod';
+2022-10-26 17:53:58.912 MST [8568] ERROR:  operator does not exist: character varying == unknown at character 38
+2022-10-26 17:53:58.912 MST [8568] HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2022-10-26 17:53:58.912 MST [8568] STATEMENT:  SELECT name from "games" WHERE "name"=='jbmod';
+2022-10-26 17:59:22.248 MST [10016] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:59:28.322 MST [13020] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 17:59:57.283 MST [19908] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 18:01:06.316 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 18:01:11.248 MST [3984] LOG:  checkpoint complete: wrote 45 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.464 s, sync=0.346 s, total=4.932 s; sync files=26, longest=0.043 s, average=0.014 s; distance=274 kB, estimate=340 kB
+2022-10-26 18:06:06.249 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 18:06:06.634 MST [3984] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.203 s, sync=0.049 s, total=0.386 s; sync files=1, longest=0.049 s, average=0.049 s; distance=6 kB, estimate=307 kB
+2022-10-26 18:09:23.777 MST [20672] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 18:10:13.702 MST [8568] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-26 18:11:06.635 MST [3984] LOG:  checkpoint starting: time
+2022-10-26 18:11:08.942 MST [3984] LOG:  checkpoint complete: wrote 20 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.946 s, sync=0.245 s, total=2.308 s; sync files=10, longest=0.067 s, average=0.025 s; distance=127 kB, estimate=289 kB

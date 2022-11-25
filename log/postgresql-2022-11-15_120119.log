@@ -1,0 +1,17 @@
+2022-11-15 12:01:21.954 MST [7756] LOG:  database system was interrupted; last known up at 2022-11-13 01:13:09 MST
+2022-11-15 12:01:32.054 MST [7756] LOG:  syncing data directory (fsync), elapsed time: 10.03 s, current path: ./base/1/2579
+2022-11-15 12:01:54.531 MST [7756] LOG:  syncing data directory (fsync), elapsed time: 32.50 s, current path: ./base/1/3468
+2022-11-15 12:02:04.538 MST [7756] LOG:  syncing data directory (fsync), elapsed time: 42.51 s, current path: ./base/1/4156
+2022-11-15 12:02:14.584 MST [7756] LOG:  syncing data directory (fsync), elapsed time: 52.56 s, current path: ./base/4/2607_fsm
+2022-11-15 12:02:24.551 MST [7756] LOG:  syncing data directory (fsync), elapsed time: 62.52 s, current path: ./base/4/3456_vm
+2022-11-15 12:02:34.576 MST [7756] LOG:  syncing data directory (fsync), elapsed time: 72.55 s, current path: ./base/5/113
+2022-11-15 12:02:44.615 MST [7756] LOG:  syncing data directory (fsync), elapsed time: 82.59 s, current path: ./base/5/2655
+2022-11-15 12:02:54.598 MST [7756] LOG:  syncing data directory (fsync), elapsed time: 92.57 s, current path: ./base/5/3395
+2022-11-15 12:03:04.627 MST [7756] LOG:  syncing data directory (fsync), elapsed time: 102.60 s, current path: ./base/5/42023_fsm
+2022-11-15 12:03:15.923 MST [7756] LOG:  syncing data directory (fsync), elapsed time: 113.90 s, current path: ./global/6001
+2022-11-15 12:03:21.353 MST [7756] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-11-15 12:03:25.166 MST [7756] LOG:  redo starts at 0/B62EF40
+2022-11-15 12:03:25.326 MST [7756] LOG:  invalid record length at 0/B62F028: wanted 24, got 0
+2022-11-15 12:03:25.326 MST [7756] LOG:  redo done at 0/B62EFF0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.28 s
+2022-11-15 12:03:25.507 MST [7740] LOG:  checkpoint starting: end-of-recovery immediate wait
+2022-11-15 12:03:26.445 MST [7740] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.123 s, total=1.043 s; sync files=2, longest=0.123 s, average=0.062 s; distance=0 kB, estimate=0 kB

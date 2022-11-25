@@ -1,0 +1,14 @@
+2022-11-04 23:36:24.740 MST [8760] LOG:  database system was interrupted; last known up at 2022-11-04 20:57:54 MST
+2022-11-04 23:36:36.196 MST [8760] LOG:  syncing data directory (fsync), elapsed time: 11.45 s, current path: ./base/1/2616_fsm
+2022-11-04 23:36:44.781 MST [8760] LOG:  syncing data directory (fsync), elapsed time: 20.04 s, current path: ./base/1/3456_fsm
+2022-11-04 23:36:54.797 MST [8760] LOG:  syncing data directory (fsync), elapsed time: 30.05 s, current path: ./base/4/2611
+2022-11-04 23:37:04.822 MST [8760] LOG:  syncing data directory (fsync), elapsed time: 40.08 s, current path: ./base/4/3467
+2022-11-04 23:37:14.788 MST [8760] LOG:  syncing data directory (fsync), elapsed time: 50.04 s, current path: ./base/5/112
+2022-11-04 23:37:24.888 MST [8760] LOG:  syncing data directory (fsync), elapsed time: 60.14 s, current path: ./base/5/2683
+2022-11-04 23:37:34.812 MST [8760] LOG:  syncing data directory (fsync), elapsed time: 70.07 s, current path: ./global/2847
+2022-11-04 23:37:40.257 MST [8760] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-11-04 23:37:40.514 MST [8760] LOG:  redo starts at 0/B62EB60
+2022-11-04 23:37:40.515 MST [8760] LOG:  invalid record length at 0/B62EB98: wanted 24, got 0
+2022-11-04 23:37:40.515 MST [8760] LOG:  redo done at 0/B62EB60 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.10 s
+2022-11-04 23:37:40.737 MST [8744] LOG:  checkpoint starting: end-of-recovery immediate wait
+2022-11-04 23:37:41.919 MST [8744] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.201 s, total=1.330 s; sync files=2, longest=0.109 s, average=0.101 s; distance=0 kB, estimate=0 kB

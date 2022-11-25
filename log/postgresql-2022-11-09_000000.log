@@ -1,0 +1,5 @@
+2022-11-09 18:02:45.855 MST [6028] ERROR:  canceling statement due to user request
+2022-11-09 18:02:45.855 MST [4952] ERROR:  canceling statement due to user request
+2022-11-09 18:02:45.932 MST [8744] LOG:  shutting down
+2022-11-09 18:02:46.097 MST [8744] LOG:  checkpoint starting: shutdown immediate
+2022-11-09 18:02:46.540 MST [8744] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.010 s, sync=0.001 s, total=0.608 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB

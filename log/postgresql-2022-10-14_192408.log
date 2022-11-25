@@ -1,0 +1,3 @@
+2022-10-14 19:24:08.319 MST [21240] LOG:  database system was shut down at 2022-10-14 19:23:42 MST
+2022-10-14 19:29:08.312 MST [26768] LOG:  checkpoint starting: time
+2022-10-14 19:29:17.032 MST [26768] LOG:  checkpoint complete: wrote 73 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.035 s, sync=1.520 s, total=8.720 s; sync files=31, longest=0.150 s, average=0.049 s; distance=394 kB, estimate=394 kB

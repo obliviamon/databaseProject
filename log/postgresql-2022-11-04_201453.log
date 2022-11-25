@@ -1,0 +1,16 @@
+2022-11-04 20:14:57.441 MST [8320] LOG:  database system was interrupted; last known up at 2022-11-01 20:12:50 MST
+2022-11-04 20:15:19.302 MST [8320] LOG:  syncing data directory (fsync), elapsed time: 21.81 s, current path: ./base/1/13385
+2022-11-04 20:15:29.376 MST [8320] LOG:  syncing data directory (fsync), elapsed time: 31.88 s, current path: ./base/1/2838
+2022-11-04 20:15:39.364 MST [8320] LOG:  syncing data directory (fsync), elapsed time: 41.87 s, current path: ./base/4/2840_fsm
+2022-11-04 20:15:49.693 MST [8320] LOG:  syncing data directory (fsync), elapsed time: 52.20 s, current path: ./base/4/6175
+2022-11-04 20:15:59.366 MST [8320] LOG:  syncing data directory (fsync), elapsed time: 61.87 s, current path: ./base/5/2609_fsm
+2022-11-04 20:16:09.341 MST [8320] LOG:  syncing data directory (fsync), elapsed time: 71.85 s, current path: ./base/5/3081
+2022-11-04 20:16:19.303 MST [8320] LOG:  syncing data directory (fsync), elapsed time: 81.81 s, current path: ./base/5/3599
+2022-11-04 20:16:29.361 MST [8320] LOG:  syncing data directory (fsync), elapsed time: 91.87 s, current path: ./base/5/6175
+2022-11-04 20:16:39.389 MST [8320] LOG:  syncing data directory (fsync), elapsed time: 101.90 s, current path: ./log/postgresql-2022-11-02_000000.log
+2022-11-04 20:16:42.120 MST [8320] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-11-04 20:16:42.634 MST [8320] LOG:  redo starts at 0/B62EA00
+2022-11-04 20:16:42.685 MST [8320] LOG:  invalid record length at 0/B62EA38: wanted 24, got 0
+2022-11-04 20:16:42.685 MST [8320] LOG:  redo done at 0/B62EA00 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.18 s
+2022-11-04 20:16:43.136 MST [8300] LOG:  checkpoint starting: end-of-recovery immediate wait
+2022-11-04 20:16:44.725 MST [8300] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.241 s, total=1.798 s; sync files=2, longest=0.132 s, average=0.121 s; distance=0 kB, estimate=0 kB

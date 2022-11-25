@@ -1,0 +1,19 @@
+2022-10-24 20:22:44.535 MST [5796] LOG:  database system was interrupted; last known up at 2022-10-21 23:08:00 MST
+2022-10-24 20:22:54.606 MST [5796] LOG:  syncing data directory (fsync), elapsed time: 10.07 s, current path: ./base/4/2666
+2022-10-24 20:23:04.607 MST [5796] LOG:  syncing data directory (fsync), elapsed time: 20.07 s, current path: ./base/4/3606
+2022-10-24 20:23:14.610 MST [5796] LOG:  syncing data directory (fsync), elapsed time: 30.07 s, current path: ./log/postgresql-2022-10-15_000000.log
+2022-10-24 20:23:19.275 MST [5796] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-10-24 20:23:20.005 MST [5796] LOG:  redo starts at 0/15606E8
+2022-10-24 20:23:20.038 MST [5796] LOG:  invalid record length at 0/1560720: wanted 24, got 0
+2022-10-24 20:23:20.038 MST [5796] LOG:  redo done at 0/15606E8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.15 s
+2022-10-24 20:23:20.379 MST [4868] LOG:  checkpoint starting: end-of-recovery immediate wait
+2022-10-24 20:23:21.540 MST [4868] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.257 s, total=1.406 s; sync files=2, longest=0.177 s, average=0.129 s; distance=0 kB, estimate=0 kB
+2022-10-24 20:46:39.920 MST [9828] FATAL:  database "ip:5432/postgres" does not exist
+2022-10-24 20:48:09.261 MST [17260] FATAL:  database "192.168.0.1:5432/postgres" does not exist
+2022-10-24 20:50:23.514 MST [10152] FATAL:  database "::1:5432/postgres" does not exist
+2022-10-24 20:50:53.007 MST [8912] FATAL:  database "127.0.0.1:5432/postgres" does not exist
+2022-10-24 20:52:07.214 MST [14100] FATAL:  database "localhost:5432/postgres" does not exist
+2022-10-24 20:53:50.435 MST [9232] ERROR:  SELECT * with no tables specified is not valid at character 8
+2022-10-24 20:53:50.435 MST [9232] STATEMENT:  SELECT *
+2022-10-24 20:53:50.448 MST [9232] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	

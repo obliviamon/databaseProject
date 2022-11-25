@@ -1,0 +1,6 @@
+2022-11-25 12:53:31.917 MST [31100] ERROR:  unrecognized configuration parameter "data_directoty"
+2022-11-25 12:53:31.917 MST [31100] STATEMENT:  show data_directoty;
+2022-11-25 12:54:11.888 MST [31100] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-25 12:58:19.252 MST [7740] LOG:  checkpoint starting: time
+2022-11-25 12:58:19.540 MST [7740] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.114 s, sync=0.066 s, total=0.288 s; sync files=1, longest=0.066 s, average=0.066 s; distance=6 kB, estimate=6 kB

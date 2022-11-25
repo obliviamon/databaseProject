@@ -1,0 +1,7 @@
+2022-11-01 20:12:41.275 MST [9240] LOG:  database system was interrupted; last known up at 2022-10-28 12:08:50 MST
+2022-11-01 20:12:49.326 MST [9240] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-11-01 20:12:49.590 MST [9240] LOG:  redo starts at 0/B62E8A0
+2022-11-01 20:12:49.591 MST [9240] LOG:  invalid record length at 0/B62E988: wanted 24, got 0
+2022-11-01 20:12:49.591 MST [9240] LOG:  redo done at 0/B62E950 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.07 s
+2022-11-01 20:12:49.781 MST [9224] LOG:  checkpoint starting: end-of-recovery immediate wait
+2022-11-01 20:12:50.348 MST [9224] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.148 s, total=0.681 s; sync files=2, longest=0.093 s, average=0.074 s; distance=0 kB, estimate=0 kB

@@ -1,0 +1,60 @@
+2022-10-25 18:28:41.445 MST [22068] ERROR:  SELECT * with no tables specified is not valid at character 8
+2022-10-25 18:28:41.445 MST [22068] STATEMENT:  SELECT *
+2022-10-25 18:28:41.461 MST [22068] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 18:29:47.618 MST [15940] ERROR:  SELECT * with no tables specified is not valid at character 8
+2022-10-25 18:29:47.618 MST [15940] STATEMENT:  SELECT *
+2022-10-25 18:29:47.641 MST [15940] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 18:31:12.243 MST [20520] ERROR:  SELECT * with no tables specified is not valid at character 8
+2022-10-25 18:31:12.243 MST [20520] STATEMENT:  SELECT *
+2022-10-25 18:31:12.259 MST [20520] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 18:31:25.718 MST [8620] ERROR:  SELECT * with no tables specified is not valid at character 8
+2022-10-25 18:31:25.718 MST [8620] STATEMENT:  SELECT *
+2022-10-25 18:31:25.747 MST [8620] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 18:38:33.099 MST [9836] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 18:39:36.521 MST [9496] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 18:40:14.400 MST [5480] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 22:31:52.263 MST [17832] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 22:32:12.952 MST [15508] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 22:35:42.440 MST [22672] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 22:37:18.873 MST [17892] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 22:38:37.964 MST [21748] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 22:46:59.516 MST [16832] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 22:59:21.718 MST [14608] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:00:35.255 MST [11648] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:01:12.230 MST [5660] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:02:10.185 MST [18324] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:02:37.784 MST [10596] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:05:36.659 MST [18596] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:06:01.186 MST [14112] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:06:16.461 MST [20940] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:07:44.708 MST [13700] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:08:12.805 MST [22992] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:08:24.063 MST [22300] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:10:46.828 MST [12452] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-10-25 23:12:04.914 MST [15124] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
