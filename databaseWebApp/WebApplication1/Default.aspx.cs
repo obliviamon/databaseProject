@@ -21,12 +21,30 @@ namespace WebApplication1
             var cmd = new NpgsqlCommand(sql, con);
 
             var version = cmd.ExecuteScalar().ToString();
-            TextBox1.Text = ($"PostgreSQL version: {version}");
+            //TextBox1.Text = ($"PostgreSQL version: {version}");
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            var cs = "Host=localhost;Username=postgres;Password=Darkstorm96;Database=postgres";
+
+            var con = new NpgsqlConnection(cs);
+            con.Open();
+
+            string sql = "SELECT * FROM games";
+            var cmd = new NpgsqlCommand(sql, con);
+
+            NpgsqlDataReader rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                TextBox2.Text += rdr.GetString(7) + "\n";
+            }
         }
     }
 }
