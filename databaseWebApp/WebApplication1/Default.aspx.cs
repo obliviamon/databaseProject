@@ -61,8 +61,38 @@ namespace WebApplication1
 
             var con = new NpgsqlConnection(cs);
             con.Open();
-
-            string sql = "SELECT * FROM " + currentTable + ";";
+            string sql = "";
+            if (RadioButtonList1.SelectedValue == RadioButtonList2.SelectedValue)
+            {
+                sql = "SELECT * FROM " + currentTable + ";";
+            }
+            else
+            {
+                sql = "SELECT * FROM games";
+                switch (RadioButtonList2.SelectedValue)
+                {
+                    case "Character":
+                        sql += ", character, appears WHERE games.id = appears.gameid AND character.id = appears.characterid AND character.name = '" + TextBox1.Text + "';";
+                        break;
+                    case "Company":
+                        sql += ", company, involvedwith WHERE games.id = involvedwith.gameid AND company.developed[0] = involvedwith.companyid AND company.name = '" + TextBox1.Text + "';";
+                        break;
+                    case "Franchise":
+                        sql += ", franchise, consistsof WHERE games.id = consistsof.gameid AND franchise.id = consistsof.franchiseid AND franchise.name = '" + TextBox1.Text + "';";
+                        break;
+                    case "Games":
+                        sql += " WHERE games.name = '" + TextBox1.Text + "';";
+                        break;
+                    case "Platform":
+                        sql += ", platform, hasreleasedate WHERE games.id = hasreleasedate.gameid AND platform.id = hasreleasedate.platformid AND platform.name = '" + TextBox1.Text + "';";
+                        break;
+                    case "Release Date":
+                        sql += ", releasedate, hasreleasedate WHERE games.id = hasreleasedate.gameid AND releasedate.id = hasreleasedate.releaseid AND releasedate.human = '" + TextBox1.Text + "';";
+                        break;
+                    default:
+                        break;
+                }
+            }
             var cmd = new NpgsqlCommand(sql, con);
 
             NpgsqlDataReader rdr = cmd.ExecuteReader();
@@ -105,6 +135,72 @@ namespace WebApplication1
             
 
             
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            var cs = "Host=localhost;Username=postgres;Password=Darkstorm96;Database=postgres";
+
+            var con = new NpgsqlConnection(cs);
+            con.Open();
+            string sql = "SELECT * FROM games";
+            switch (RadioButtonList2.SelectedValue)
+            {
+                case "Character":
+                    sql += ", character, appears WHERE games.id = appears.gameid AND character.id = appears.characterid;";
+                    break;
+                case "Company":
+                    sql += ", company, involvedwith WHERE games.id = involvedwith.gameid AND company.developed[0] = involvedwith.companyid;";
+                    break;
+                case "Franchise":
+                    sql += ", franchise, consistsof WHERE games.id = consistsof.gameid AND franchise.id = consistsof.franchiseid;";
+                    break;
+                case "Games":
+                    sql += ";";
+                    break;
+                case "Platform":
+                    sql += ", platform WHERE games.platforms[0] = platform.id;";
+                    break;
+                case "Release Date":
+                    sql += ", releasedate, hasreleasedate WHERE games.id = hasreleasedate.gameid AND releasedate.id = hasreleasedate.releaseid;";
+                    break;
+                default:
+                    break;
+            }
+            var cmd = new NpgsqlCommand(sql, con);
+
+            NpgsqlDataReader rdr = cmd.ExecuteReader();
+            TextBox2.Text = "";
+            while (rdr.Read())
+            {
+                //id, genres, game_engines, franchise, age_ratings, platforms, release_dates, name, involved_companies
+                TextBox2.Text += rdr.GetInt32(0) + " - ";
+                switch (RadioButtonList2.SelectedValue)
+                {
+                    case "Character":
+                        TextBox2.Text += rdr.GetString(1);
+                        break;
+                    case "Company":
+                        TextBox2.Text += rdr.GetString(1);
+                        break;
+                    case "Franchise":
+                        TextBox2.Text += rdr.GetString(1);
+                        break;
+                    case "Games":
+                        TextBox2.Text += rdr.GetString(7);
+                        break;
+                    case "Platform":
+                        TextBox2.Text += rdr.GetString(1);
+                        break;
+                    case "Release Date":
+                        TextBox2.Text += rdr.GetString(1);
+                        break;
+                    default:
+                        break;
+                }
+                TextBox2.Text += "\n";
+            }
+            rdr.Close();
         }
     }
 }
