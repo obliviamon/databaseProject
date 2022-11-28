@@ -1,0 +1,24 @@
+2022-11-28 09:11:28.490 MST [32784] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-28 09:11:28.490 MST [8296] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-28 09:12:37.592 MST [4116] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-28 09:25:37.502 MST [13264] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-28 09:26:33.565 MST [12544] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-28 09:27:10.046 MST [7740] LOG:  checkpoint starting: time
+2022-11-28 09:27:29.951 MST [7740] LOG:  checkpoint complete: wrote 180 buffers (1.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=19.159 s, sync=0.623 s, total=19.906 s; sync files=73, longest=0.032 s, average=0.009 s; distance=1573 kB, estimate=1573 kB
+2022-11-28 09:40:02.812 MST [25264] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-28 09:58:33.643 MST [6500] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-28 09:59:19.715 MST [16444] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-28 10:01:20.392 MST [35672] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-28 10:01:20.392 MST [1484] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-28 10:01:20.392 MST [23656] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
