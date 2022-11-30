@@ -13,18 +13,7 @@ namespace WebApplication1
         string currentTable = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
-            var cs = "Host=localhost;Username=postgres;Password=Darkstorm96;Database=postgres";
-            var con = new NpgsqlConnection(cs);
-            con.Open();
-
-            var sql = "SELECT version()";
-
-            var cmd = new NpgsqlCommand(sql, con);
-
-            var version = cmd.ExecuteScalar().ToString();
-            TextBox1.Text = ($"PostgreSQL version: {version}");
-            */
+ 
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)
